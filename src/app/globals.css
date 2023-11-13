@@ -1,0 +1,286 @@
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities;
+*/
+
+@import url("https://fonts.cdnfonts.com/css/sf-pro-display");
+@import url("https://fonts.cdnfonts.com/css/sf-ui-text-2");
+@import url("https://fonts.cdnfonts.com/css/helvetica-neue-55");
+
+:root {
+  --pro-display: "SF Pro Display", "Helvetica Neue", Helvetica, Arial,
+    sans-serif;
+  --pro-text: "SF UI Text", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+  --primary-color: #ffffff;
+  --secondary-color: #1d1d1f;
+  --secondary-text: #86868b;
+  --button-color: #0071e3;
+  --a-color: #222222;
+  --a-hover-color: #357bd3;
+  --stroke: #dbdbdb;
+
+  --gradient: linear-gradient(90deg, #4800FF 0%, #7318E0 50%, #9D30C1 100%);
+}
+
+[data-theme="dark"] {
+  --primary-color: #1d1d1f;
+  --secondary-color: #ffffff;
+  --secondary-text: #86868b;
+  --button-color: #357bd3;
+  --a-color: #ffffff;
+  --a-hover-color: #0071e3;
+  --stroke: #dbdbdb;
+}
+
+body {
+  margin: 0;
+  padding-top: 52px;
+}
+
+nav {
+  z-index: 100;
+  display: flex;
+  height: 52px;
+  width: 100%;
+  font-size: 12px;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  background-color: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--stroke);
+  transition: all 0.3s ease-in-out;
+}
+
+nav.scrolled {
+  z-index: 100;
+  background-color: rgba(255, 255, 255, 1);
+  backdrop-filter: none;
+  border-bottom: 1px solid var(--stroke);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  font-family: var(--pro-display);
+  font-size: 21px;
+  color: var(--secondary-color);
+  padding-left: 100px;
+}
+
+.right-items {
+  align-items: center;
+  display: flex;
+  margin-left: auto;
+  gap: 10px;
+  padding-right: 100px;
+}
+
+a {
+  font-family: var(--pro-text);
+  color: var(--a-color);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--a-hover-color);
+}
+
+.button {
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  white-space: nowrap;
+  background: var(--button-color);
+  color: rgb(255, 255, 255) !important;
+  border: 0px;
+  outline: 0px;
+  font-size: 12px;
+  line-height: 1.33337;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  font-family: var(--pro-text);
+  min-width: 23px;
+  padding: 4px 11px;
+  border-radius: 12px;
+}
+
+.button-md {
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  white-space: nowrap;
+  background: var(--button-color);
+  color: rgb(255, 255, 255) !important;
+  border: 0px;
+  outline: 0px;
+  font-size: 16px;
+  line-height: 1.33337;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  font-family: var(--pro-text);
+  min-width: 23px;
+  padding: 8px 16px;
+  border-radius: 18px;
+}
+
+.alert {
+  display: flex;
+  background-color: var(--button-color);
+  color: #ffffff !important;
+  height: 50px;
+  width: 100%;
+  font-size: 14px !important;
+  justify-content: center;
+  align-items: center;
+}
+
+.alerta {
+  color: #ffffff !important;
+  font-size: 14px !important;
+}
+
+.CTA {
+  max-width: 1000px;
+  padding-top: 52px;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  top: calc(100% - 150px);
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.h1-title {
+  color: var(--secondary-color);
+  font-size: 64px;
+}
+
+.h3 {
+  color: var(--secondary-color);
+  font-size: 28px;
+}
+
+.description {
+  color: var(--secondary-text);
+  font-size: 24px;
+}
+
+.macos-version {
+  color: var(--secondary-text);
+  font-size: 14px;
+}
+
+.CTALogo {
+  width: auto;
+  height: 128px;
+}
+
+.CTAApp {
+  width: 1012px;
+  height: auto;
+}
+
+/* Media queries for responsive design */
+@media only screen and (max-width: 768px) {
+  .CTA {
+    padding-top: 32px;
+  }
+
+  .h1-title {
+    font-size: 48px;
+  }
+
+  .h3 {
+    font-size: 24px;
+  }
+
+  .description {
+    font-size: 20px;
+  }
+
+  .macos-version {
+    font-size: 12px;
+  }
+
+  .CTALogo {
+    height: 96px;
+  }
+
+  .CTAApp {
+    width: 768px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .CTA {
+    max-width: 300px;
+    padding-top: 16px;
+    top: 60%;
+  }
+
+  .h1-title {
+    font-size: 32px;
+  }
+
+  .h3 {
+    font-size: 20px;
+  }
+
+  .description {
+    font-size: 16px;
+  }
+
+  .macos-version {
+    font-size: 10px;
+  }
+
+  .CTALogo {
+    height: 64px;
+  }
+
+  .CTAApp {
+    width: 480px;
+  }
+}
+
+/* Media queries for responsive design */
+@media only screen and (max-width: 768px) {
+  .logo {
+    padding-left: 20px;
+    font-size: 18px;
+  }
+
+  .right-items {
+    padding-right: 20px;
+  }
+
+  .button {
+    font-size: 10px;
+    min-width: 20px;
+    padding: 3px 8px;
+    border-radius: 10px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .logo {
+    padding-left: 10px;
+    font-size: 16px;
+  }
+
+  .right-items {
+    padding-right: 10px;
+    gap: 5px;
+  }
+
+  .button {
+    font-size: 8px;
+    min-width: 18px;
+    padding: 2px 6px;
+    border-radius: 8px;
+  }
+}
