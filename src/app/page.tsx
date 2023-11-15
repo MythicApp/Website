@@ -9,14 +9,16 @@ export default function Home() {
       <Alert />
 
       <div className="CTA">
-        <Image
+        
+      {/* <Image
           className="CTALogo"
           src="/Mythic.png"
           width={500}
           height={500}
           alt="Mythic logo"
         />
-        <h1 className="h3">Gaming on macOS</h1>
+        <h1 className="h3">Gaming on macOS</h1> */}
+
         <h1 className="h1-title">
           Mythic is a game launcher that bridges the gap between windows and
           mac.

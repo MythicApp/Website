@@ -34,6 +34,7 @@
 }
 
 body {
+  background-color: var(--primary-color);
   margin: 0;
   padding-top: 52px;
 }
@@ -129,7 +130,7 @@ a:hover {
   background-color: var(--button-color);
   color: #ffffff !important;
   height: 50px;
-  width: 100%;
+  width: 100% !important;
   font-size: 14px !important;
   justify-content: center;
   align-items: center;
@@ -142,16 +143,12 @@ a:hover {
 
 .CTA {
   max-width: 1000px;
-  padding-top: 52px;
+  margin: 50px auto 0;
   display: flex;
   text-align: center;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  position: absolute;
-  top: calc(100% - 150px);
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 
 .h1-title {
@@ -180,14 +177,15 @@ a:hover {
 }
 
 .CTAApp {
-  width: 1012px;
+  max-width: 100%;
   height: auto;
 }
 
 /* Media queries for responsive design */
 @media only screen and (max-width: 768px) {
   .CTA {
-    padding-top: 32px;
+    margin-top: 32px;
+    padding-top: 52px;
   }
 
   .h1-title {
@@ -213,13 +211,14 @@ a:hover {
   .CTAApp {
     width: 768px;
   }
+
 }
 
 @media only screen and (max-width: 480px) {
   .CTA {
     max-width: 300px;
-    padding-top: 16px;
-    top: 60%;
+    margin-top: 16px;
+    padding-top: 32px;
   }
 
   .h1-title {
