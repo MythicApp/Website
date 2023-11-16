@@ -29,7 +29,7 @@ export default function Home() {
           to create a GUI frontend for Legendary and to play
           Windows games using Apple's game porting toolkit.
         </p>
-        <a className="button-md" href="https://discord.gg/58NZ7fFqPy">
+        <a className="button-md" href="/waitlist">
           Join Waitlist
         </a>
         <p className="macos-version">for macOS 14+</p>

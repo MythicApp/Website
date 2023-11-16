@@ -81,6 +81,7 @@ a {
   font-family: var(--pro-text);
   color: var(--a-color);
   text-decoration: none;
+  transition: 0.3s;
 }
 
 a:hover {
@@ -179,6 +180,11 @@ a:hover {
 .CTAApp {
   max-width: 100%;
   height: auto;
+  transition: 0.3s;
+}
+
+.CTAApp:hover {
+  transform: scale(1.05);
 }
 
 /* Media queries for responsive design */
@@ -258,9 +264,9 @@ a:hover {
   }
 
   .button {
-    font-size: 10px;
+    font-size: 12px;
     min-width: 20px;
-    padding: 3px 8px;
+    padding: 3px 10px;
     border-radius: 10px;
   }
 }
@@ -273,13 +279,17 @@ a:hover {
 
   .right-items {
     padding-right: 10px;
-    gap: 5px;
+    gap: 10px;
   }
 
   .button {
-    font-size: 8px;
+    font-size: 11px !important;
     min-width: 18px;
     padding: 2px 6px;
     border-radius: 8px;
+  }
+
+  .navwaitlist {
+    display: none;
   }
 }

@@ -16,6 +16,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <meta name="theme-color" content="#a046ff" />
+        <meta property="og:image" content="https://getmythic.app/ogimage.png" />
+      </head>
       <body className={inter.className}>{children}</body>
     </html>
   )

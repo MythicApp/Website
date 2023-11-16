@@ -3,10 +3,10 @@ export default function Navbar() {
     <nav>
       <h1 className="logo">Mythic</h1>
       <div className="right-items">
-        <a className="nav-a" href="https://github.com/mythicapp">Github</a>
-        <a className="nav-a" href="https://discord.gg/58NZ7fFqPy">Discord</a>
-        <a className="nav-a" href="https://github.com/MythicApp/Mythic/wiki/Introduction">Wiki</a>
-        <a className="button" href="https://discord.gg/58NZ7fFqPy">
+        <a className="nav-a" href="https://github.com/mythicapp" target="_blank">Github</a>
+        <a className="nav-a" href="https://discord.gg/58NZ7fFqPy" target="_blank">Discord</a>
+        <a className="nav-a" href="https://github.com/MythicApp/Mythic/wiki/Introduction" target="_blank">Wiki</a>
+        <a className="button navwaitlist" href="/waitlist">
           Join Waitlist
         </a>
       </div>
