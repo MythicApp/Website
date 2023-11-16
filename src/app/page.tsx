@@ -9,8 +9,8 @@ export default function Home() {
       <Alert />
 
       <div className="CTA">
-        
-      {/* <Image
+
+        {/* <Image
           className="CTALogo"
           src="/Mythic.png"
           width={500}
