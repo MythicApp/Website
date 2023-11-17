@@ -162,6 +162,22 @@ a:hover {
 
 /* Media queries for responsive design */
 @media only screen and (max-width: 768px) {
+  .logo {
+    padding-left: 20px;
+    font-size: 18px;
+  }
+
+  .right-items {
+    padding-right: 20px;
+  }
+
+  .button {
+    font-size: 12px;
+    min-width: 20px;
+    padding: 3px 10px;
+    border-radius: 10px;
+  }
+
   .CTA {
     margin-top: 32px;
     padding-top: 52px;
@@ -186,6 +202,27 @@ a:hover {
 }
 
 @media only screen and (max-width: 480px) {
+  .logo {
+    padding-left: 10px;
+    font-size: 16px;
+  }
+
+  .right-items {
+    padding-right: 10px;
+    gap: 10px;
+  }
+
+  .button {
+    font-size: 11px !important;
+    min-width: 18px;
+    padding: 2px 6px;
+    border-radius: 8px;
+  }
+
+  .navwaitlist {
+    display: none;
+  }
+
   .CTA {
     max-width: 300px;
     margin-top: 16px;
@@ -206,46 +243,5 @@ a:hover {
 
   .CTA-Screenshot {
     width: 480px;
-  }
-}
-
-@media only screen and (max-width: 768px) {
-  .logo {
-    padding-left: 20px;
-    font-size: 18px;
-  }
-
-  .right-items {
-    padding-right: 20px;
-  }
-
-  .button {
-    font-size: 12px;
-    min-width: 20px;
-    padding: 3px 10px;
-    border-radius: 10px;
-  }
-}
-
-@media only screen and (max-width: 480px) {
-  .logo {
-    padding-left: 10px;
-    font-size: 16px;
-  }
-
-  .right-items {
-    padding-right: 10px;
-    gap: 10px;
-  }
-
-  .button {
-    font-size: 11px !important;
-    min-width: 18px;
-    padding: 2px 6px;
-    border-radius: 8px;
-  }
-
-  .navwaitlist {
-    display: none;
   }
 }
