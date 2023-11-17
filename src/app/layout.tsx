@@ -17,6 +17,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'></link>
         <meta name="theme-color" content="#a046ff" />
         <meta property="og:image" content="https://getmythic.app/ogimage.png" />
       </head>
