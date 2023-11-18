@@ -13,6 +13,7 @@
   --button-color: #0071e3;
   --a-color: #222222;
   --a-hover-color: #357bd3;
+  --navbar-color: rgba(255, 255, 255, 0.9);
   --stroke: #dbdbdb;
 }
 
@@ -23,14 +24,14 @@
   --button-color: #357bd3;
   --a-color: #ffffff;
   --a-hover-color: #0071e3;
-  --stroke: #dbdbdb;
+  --navbar-color: rgba(21, 21, 22, 0.9);
+  --stroke: #3e3e3e;
 }
 
 body {
   background-color: var(--primary-color);
   margin: 0;
   padding-top: 52px;
-  scroll-behavior: smooth;
 }
 
 nav {
@@ -42,7 +43,7 @@ nav {
   align-items: center;
   position: fixed;
   top: 0;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: var(--navbar-color);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--stroke);
   transition: all 0.3s ease-in-out;
