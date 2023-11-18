@@ -119,10 +119,16 @@ a:hover {
   font-size: 14px;
   justify-content: center;
   align-items: center;
+  text-align: center;
 }
 
 .alert-text {
   color: #ffffff;
+  transition: 0.3s;
+}
+
+.alert-text:hover {
+  color: #f7f1f1;
 }
 
 .CTA {
@@ -179,6 +185,7 @@ a:hover {
   }
 
   .CTA {
+    max-width: 550px;
     margin-top: 32px;
     padding-top: 52px;
   }

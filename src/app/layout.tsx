@@ -6,7 +6,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Mythic',
-  description: 'An open-source Epic Games Launcher alternative and normal game launcher for macOS written in Swift. We started this project to create a GUI frontend for Legendary and to play Windows games using Apple\'s game porting toolkit.',
+  description: 'An open-source Epic Games Launcher alternative and normal game launcher for macOS written in Swift. We started this project to create a GUI frontend for Legendary and to play Windows games using game porting toolkit by Apple.',
 }
 
 export default function RootLayout({
@@ -29,7 +29,7 @@ export default function RootLayout({
         <meta property="og:locale" content="en_US" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Mythic" />
-        <meta name="twitter:description" content="An open-source Epic Games Launcher alternative and normal game launcher for macOS written in Swift. We started this project to create a GUI frontend for Legendary and to play Windows games using Apple\'s game porting toolkit." />
+        <meta name="twitter:description" content="An open-source Epic Games Launcher alternative and normal game launcher for macOS written in Swift. We started this project to create a GUI frontend for Legendary and to play Windows games using game porting toolkit by Apple." />
         <meta name="twitter:site" content="@mythicapp" />
         <meta name="twitter:image" content="https://getmythic.app/ogimage.png" />
         <meta name="author" content="Mythic, Jeremy, Jecta, blackxfiied" />
