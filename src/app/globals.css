@@ -122,9 +122,22 @@ a:hover {
   text-align: center;
 }
 
+.wiki-nav {
+  display: flex;
+  background-color: var(--button-color);
+  height: 50px;
+  width: 100%;
+  font-size: 14px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 25px;
+}
+
 .alert-text {
   color: #ffffff;
   transition: 0.3s;
+  cursor: pointer;
 }
 
 .alert-text:hover {
@@ -141,12 +154,13 @@ a:hover {
   flex-direction: column;
 }
 
-.h1-title {
+h1 {
+  font-family: var(--pro-display);
   color: var(--secondary-color);
   font-size: 40px;
 }
 
-.description {
+p {
   color: var(--secondary-text);
   font-size: 21px;
 }
@@ -156,13 +170,13 @@ a:hover {
   font-size: 14px;
 }
 
-.CTA-Screenshot {
+img {
   max-width: 100%;
   height: auto;
   transition: 0.3s;
 }
 
-.CTA-Screenshot:hover {
+img:hover {
   transform: scale(1.05);
 }
 
@@ -190,11 +204,11 @@ a:hover {
     padding-top: 52px;
   }
 
-  .h1-title {
+  h1 {
     font-size: 48px;
   }
 
-  .description {
+  p {
     font-size: 20px;
   }
 
@@ -202,7 +216,7 @@ a:hover {
     font-size: 12px;
   }
 
-  .CTA-Screenshot {
+  img {
     width: 768px;
   }
 
@@ -236,11 +250,11 @@ a:hover {
     padding-top: 32px;
   }
 
-  .h1-title {
+  h1 {
     font-size: 32px;
   }
 
-  .description {
+  p {
     font-size: 16px;
   }
 
@@ -248,7 +262,7 @@ a:hover {
     font-size: 10px;
   }
 
-  .CTA-Screenshot {
+  img {
     width: 480px;
   }
 }

@@ -9,11 +9,11 @@ export default function Home() {
       <Alert />
 
       <div className="CTA">
-        <h1 className="h1-title">
+        <h1>
           Mythic is a game launcher that bridges the gap between windows and
           mac.
         </h1>
-        <p className="description">
+        <p>
           An open-source Epic Games Launcher alternative and normal game
           launcher for macOS written in Swift. We started this project
           to create a GUI frontend for Legendary and to play

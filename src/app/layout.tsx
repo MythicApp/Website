@@ -35,8 +35,8 @@ export default function RootLayout({
         <meta name="author" content="Mythic, Jeremy, Jecta, blackxfiied" />
         <meta name="keywords" content="mythic, macos, gaming, mac, apple" />
         <meta name="referrer" content="no-referrer-when-downgrade" />
-        <meta http-equiv="content-language" content="en-US" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta httpEquiv="content-language" content="en-US" />
+        <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
       </head>
       <body className={inter.className}>{children}</body>
     </html>
