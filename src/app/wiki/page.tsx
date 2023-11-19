@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import ReactMarkdown from 'react-markdown';
 import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 
 const Wiki = () => {
     const [selectedOption, setSelectedOption] = useState('Introduction');
@@ -41,11 +42,12 @@ const Wiki = () => {
                 {error ? (
                     <div className="error">{error}</div>
                 ) : (
-                    <div style={{textAlign: "left"}} className='CTA'>
+                    <div style={{ textAlign: "left" }} className='CTA'>
                         <ReactMarkdown>{content}</ReactMarkdown>
                     </div>
                 )}
             </div>
+            <Footer />
         </div>
     );
 };

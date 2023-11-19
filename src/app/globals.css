@@ -32,6 +32,7 @@ body {
   background-color: var(--primary-color);
   margin: 0;
   padding-top: 52px;
+  transition: 0.3s;
 }
 
 nav {
@@ -163,11 +164,13 @@ h1 {
 }
 
 p {
+  font-family: var(--pro-text);
   color: var(--secondary-text);
   font-size: 21px;
 }
 
 .macos-version {
+  font-family: var(--pro-text);
   color: var(--secondary-text);
   font-size: 14px;
 }
@@ -182,7 +185,49 @@ img:hover {
   transform: scale(1.05);
 }
 
-/* Media queries for responsive design */
+.footer {
+  font-family: var(--pro-text);
+  background-color: var(--primary-color);
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  color: var(--secondary-text);
+  border-top: 1px solid var(--stroke);
+}
+
+.theme-switcher {
+  display: flex;
+  align-items: center;
+}
+
+.theme-option {
+  border: none;
+  background-color: transparent;
+  color: var(--secondary-text);
+  cursor: pointer;
+  margin-right: 10px;
+  padding: 5px;
+  font-size: 14px;
+  font-family: var(--pro-text);
+  transition: 0.3s;
+}
+
+.theme-option.active {
+  font-weight: bold;
+}
+
+.theme-option:hover {
+  text-decoration: underline;
+}
+
+.copyright {
+  font-size: 12px;
+  color: var(--secondary-text);
+  margin-left: 10px;
+}
+
 @media only screen and (max-width: 768px) {
   .logo {
     padding-left: 20px;
