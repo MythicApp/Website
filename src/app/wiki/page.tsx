@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 
@@ -44,7 +45,7 @@ const Wiki = () => {
                 ) : (
                     <div className='CTA'>
                         <div style={{ textAlign: "left", justifyContent: "center", alignItems: "center" }}>
-                        <ReactMarkdown>{content}</ReactMarkdown>
+                            <ReactMarkdown remarkPlugins={[remarkGfm]}>{content}</ReactMarkdown>
                         </div>
                     </div>
                 )}

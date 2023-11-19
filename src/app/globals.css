@@ -163,6 +163,12 @@ h1 {
   font-size: 40px;
 }
 
+h2 {
+  font-family: var(--pro-display);
+  color: var(--secondary-color);
+}
+
+
 p {
   font-family: var(--pro-text);
   color: var(--secondary-text);
@@ -227,6 +233,34 @@ img:hover {
   color: var(--secondary-text);
   margin-left: 10px;
 }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--pro-text);
+  color: var(--pro-text);
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid var(--stroke);
+}
+
+th {
+  font-weight: bold;
+}
+
+@media only screen and (max-width: 768px) {
+  table {
+    font-size: 14px;
+  }
+
+  th, td {
+    padding: 6px;
+  }
+}
+
 
 @media only screen and (max-width: 768px) {
   .logo {
