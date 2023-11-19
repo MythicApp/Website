@@ -49,6 +49,7 @@ const Wiki = () => {
                     </div>
                 )}
             </div>
+            <br></br>
             <Footer />
         </div>
     );
