@@ -41,7 +41,7 @@ const Wiki = () => {
                 {error ? (
                     <div className="error">{error}</div>
                 ) : (
-                    <div style="text-align: left;" className='CTA'>
+                    <div style={{text-align: left;}} className='CTA'>
                         <ReactMarkdown>{content}</ReactMarkdown>
                     </div>
                 )}
