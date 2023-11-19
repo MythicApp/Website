@@ -41,12 +41,12 @@ const Footer: React.FC = () => {
                 >
                     Dark
                 </button>
-                <button
+                {/* <button
                     className={`theme-option ${theme === 'auto' ? 'active' : ''}`}
                     onClick={() => handleThemeChange('auto')}
                 >
                     Auto
-                </button>
+                </button> */}
             </div>
         </footer>
     );
