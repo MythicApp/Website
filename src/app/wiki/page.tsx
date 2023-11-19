@@ -42,8 +42,10 @@ const Wiki = () => {
                 {error ? (
                     <div className="error">{error}</div>
                 ) : (
-                    <div style={{ textAlign: "left" }} className='CTA'>
+                    <div className='CTA'>
+                        <div style={{ textAlign: "left", justifyContent: "center", alignItems: "center" }}>
                         <ReactMarkdown>{content}</ReactMarkdown>
+                        </div>
                     </div>
                 )}
             </div>
