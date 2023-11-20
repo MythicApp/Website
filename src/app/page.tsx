@@ -11,7 +11,7 @@ export default function Home() {
 
       <div className="CTA">
         <h1>
-          Mythic is a game launcher that bridges the gap between windows and
+          <span className="mythic-gradient-text">Mythic</span> is the game launcher that bridges the gap between windows and
           mac.
         </h1>
         <p>
