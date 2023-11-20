@@ -181,6 +181,13 @@ p {
   font-size: 14px;
 }
 
+.mythic-gradient-text {
+  background: linear-gradient(to right, #5412F6, #7E1ED8);
+  background-clip: text;
+  color: transparent;
+  display: inline;
+}
+
 img {
   max-width: 100%;
   height: auto;
