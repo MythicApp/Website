@@ -15,6 +15,8 @@
   --a-hover-color: #357bd3;
   --navbar-color: rgba(255, 255, 255, 0.9);
   --stroke: #dbdbdb;
+
+  --gradient: linear-gradient(to right, #5412F6, #7E1ED8);
 }
 
 [data-theme="dark"] {
@@ -26,6 +28,8 @@
   --a-hover-color: #0071e3;
   --navbar-color: rgba(21, 21, 22, 0.9);
   --stroke: #3e3e3e;
+
+  --gradient: linear-gradient(to right, #5412F6, #7E1ED8);
 }
 
 body {
@@ -182,7 +186,7 @@ p {
 }
 
 .mythic-gradient-text {
-  background: linear-gradient(to right, #5412F6, #7E1ED8);
+  background: var(--gradient);
   background-clip: text;
   color: transparent;
   display: inline;
