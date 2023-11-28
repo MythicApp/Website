@@ -267,6 +267,7 @@ table {
 }
 
 th, td {
+  color: var(--a-color);
   padding: 8px;
   text-align: left;
   border-bottom: 1px solid var(--stroke);
