@@ -16,6 +16,8 @@
   --navbar-color: rgba(255, 255, 255, 0.9);
   --stroke: #dbdbdb;
 
+  --secondary-nav-color: #f8f8f9;
+
   --gradient: linear-gradient(to right, #5412F6, #7E1ED8);
 }
 
@@ -28,6 +30,8 @@
   --a-hover-color: #0071e3;
   --navbar-color: rgba(21, 21, 22, 0.9);
   --stroke: #3e3e3e;
+
+  --secondary-nav-color: #1d1d1f;
 
   --gradient: linear-gradient(to right, #5412F6, #7E1ED8);
 }
@@ -131,7 +135,7 @@ a:hover {
 
 .wiki-nav {
   display: flex;
-  background-color: var(--button-color);
+  background-color: var(--secondary-nav-color);
   height: 50px;
   width: 100%;
   font-size: 14px;
@@ -139,6 +143,16 @@ a:hover {
   align-items: center;
   text-align: center;
   gap: 25px;
+}
+
+.wiki-nav-text {
+  color: var(--a-color);
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.wiki-nav-text:hover {
+  color: var(--a-hover-color);
 }
 
 .alert-text {

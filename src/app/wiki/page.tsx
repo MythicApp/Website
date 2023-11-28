@@ -35,9 +35,9 @@ const Wiki = () => {
         <div>
             <Navbar />
             <div className="wiki-nav">
-                <a className="alert-text" onClick={() => handleOptionClick('Introduction')}>Introduction</a>
-                <a className="alert-text" onClick={() => handleOptionClick('Installation')}>Installation</a>
-                <a className="alert-text" onClick={() => handleOptionClick('Compatibility')}>Compatibility</a>
+                <a className="wiki-nav-text" onClick={() => handleOptionClick('Introduction')}>Introduction</a>
+                <a className="wiki-nav-text" onClick={() => handleOptionClick('Installation')}>Installation</a>
+                <a className="wiki-nav-text" onClick={() => handleOptionClick('Compatibility')}>Compatibility</a>
             </div>
             <div className="content">
                 {error ? (
