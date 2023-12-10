@@ -133,7 +133,7 @@ a:hover {
   text-align: center;
 }
 
-.wiki-nav {
+.docs-nav {
   display: flex;
   background-color: var(--secondary-nav-color);
   height: 50px;
@@ -145,13 +145,13 @@ a:hover {
   gap: 25px;
 }
 
-.wiki-nav-text {
+.docs-nav-text {
   color: var(--a-color);
   transition: 0.3s;
   cursor: pointer;
 }
 
-.wiki-nav-text:hover {
+.docs-nav-text:hover {
   color: var(--a-hover-color);
 }
 
@@ -266,7 +266,8 @@ table {
   color: var(--pro-text);
 }
 
-th, td {
+th,
+td {
   color: var(--a-color);
   padding: 8px;
   text-align: left;
@@ -312,7 +313,8 @@ details {
     font-size: 14px;
   }
 
-  th, td {
+  th,
+  td {
     padding: 6px;
   }
 }

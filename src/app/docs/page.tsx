@@ -6,8 +6,8 @@ import remarkGfm from 'remark-gfm';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
 
-const Wiki = () => {
-    const [selectedOption, setSelectedOption] = useState('Introduction');
+const Docs = () => {
+    const [selectedOption, setSelectedOption] = useState('Installation');
     const [content, setContent] = useState('');
     const [error, setError] = useState('');
 
@@ -34,26 +34,23 @@ const Wiki = () => {
     return (
         <div>
             <Navbar />
-            <div className="wiki-nav">
-                <a className="wiki-nav-text" onClick={() => handleOptionClick('Introduction')}>Introduction</a>
-                <a className="wiki-nav-text" onClick={() => handleOptionClick('Installation')}>Installation</a>
-                <a className="wiki-nav-text" onClick={() => handleOptionClick('Compatibility')}>Compatibility</a>
+            <div className="docs-nav">
+                <a className="docs-nav-text" onClick={() => handleOptionClick('Installation')}>Installation</a>
+                <a className="docs-nav-text" onClick={() => handleOptionClick('Compatibility')}>Compatibility</a>
             </div>
-            <div className="content">
-                {error ? (
-                    <div className="error">{error}</div>
-                ) : (
-                    <div className='CTA'>
-                        <div style={{ textAlign: "left", justifyContent: "center", alignItems: "center" }}>
-                            <ReactMarkdown remarkPlugins={[remarkGfm]}>{content}</ReactMarkdown>
-                        </div>
+            {error ? (
+                <div className="error">{error}</div>
+            ) : (
+                <div className='CTA'>
+                    <div style={{ textAlign: "left", justifyContent: "center", alignItems: "center" }}>
+                        <ReactMarkdown remarkPlugins={[remarkGfm]}>{content}</ReactMarkdown>
                     </div>
-                )}
-            </div>
+                </div>
+            )}
             <br></br>
             <Footer />
         </div>
     );
 };
 
-export default Wiki;
+export default Docs;

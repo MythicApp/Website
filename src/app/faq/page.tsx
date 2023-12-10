@@ -39,12 +39,17 @@ export default function Faq() {
 
                 <details>
                     <summary>How do i download and install Mythic?</summary>
-                    We currently do not have a stable release ready, but you can download the latest build from our <a href="https://github.com/MythicApp/Mythic">GitHub</a> page if you wish to get an early build, keep in mind we do not give support and are not liable for big game files on your system, if not join the <a href="https://getmythic.app/waitlist">waitlist</a> for now.
+                    We currently do not have a stable release ready, but you can download the latest build from our <a href="https://github.com/MythicApp/Mythic">GitHub</a> page if you wish to get an early build, keep in mind we do not give support and are not liable for big game files on your system, if not join the <a href="https://getmythic.app/waitlist">waitlist</a> for now. For a more detailed guide on how to install Mythic, check out the <a href="/docs">docs</a>.
                 </details><hr />
 
                 <details>
                     <summary>Can i add my own games (non-launcher)?</summary>
                     Yes, you can add your own games to Mythic manually.
+                </details><hr />
+
+                <details>
+                    <summary>What games run using Mythic?</summary>
+                    Almost any game that runs on Windows can run on Mythic, but we are still working on improving compatibility with anti-cheats, for example you can get into a Fornite lobby not a match. For a very limited list of games that we have tested, check out the <a href="/docs">docs</a>.
                 </details><hr />
 
                 <details>
