@@ -277,6 +277,36 @@ th {
   font-weight: bold;
 }
 
+hr {
+  margin: 10px 0px;
+  width: 100%;
+  border: 1px solid var(--stroke);
+}
+
+.h1-faq {
+  text-align: left;
+  width: 100%;
+}
+
+summary {
+  width: 100%;
+  text-align: left;
+  font-family: var(--pro-display);
+  color: var(--a-color);
+  font-size: 26px;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 10px;
+}
+
+details {
+  width: 100%;
+  text-align: left;
+  font-family: var(--pro-text);
+  color: var(--secondary-text);
+  font-size: 20px;
+}
+
 @media only screen and (max-width: 768px) {
   table {
     font-size: 14px;
