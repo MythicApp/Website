@@ -131,6 +131,18 @@ a:hover {
   justify-content: center;
   align-items: center;
   text-align: center;
+  transition: transform 0.3s ease-in-out;
+  transform: translateX(0);
+  animation: slideIn 0.5s ease-in-out forwards;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
 }
 
 .docs-nav {
