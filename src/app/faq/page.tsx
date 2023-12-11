@@ -7,7 +7,7 @@ export default function Faq() {
       <Navbar />
       <div className="CTA">
         <h1 className="h1-faq">Frequently Asked Questions</h1>
-        
+
         <details>
           <summary id="1">What is Mythic?</summary>
           Mythic is an open-source Epic Games Launcher alternative and a normal game launcher for macOS, written in Swift. This project was created to provide a GUI frontend for <a href="https://github.com/derrod/legendary">Legendary</a> and to play Windows games using Apple's game porting toolkit.
