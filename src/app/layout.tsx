@@ -14,7 +14,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'></link>
         <meta name="robots" content="index, follow" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="canonical" href="https://getmythic.app" />
