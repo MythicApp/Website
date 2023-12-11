@@ -11,6 +11,7 @@
   --secondary-color: #1d1d1f;
   --secondary-text: #86868b;
   --button-color: #0071e3;
+  --button-hover-color: #357bd3;
   --a-color: #222222;
   --a-hover-color: #357bd3;
   --navbar-color: rgba(255, 255, 255, 0.9);
@@ -23,8 +24,8 @@
 [data-theme="dark"] {
   --primary-color: #1d1d1f;
   --secondary-color: #ffffff;
-  --secondary-text: #86868b;
-  --button-color: #357bd3;
+  --button-color: #0071e3;
+  --button-hover-color: #357bd3;
   --a-color: #ffffff;
   --a-hover-color: #0071e3;
   --navbar-color: rgba(21, 21, 22, 0.9);
@@ -101,6 +102,10 @@ a:hover {
   border-radius: 12px;
 }
 
+.button:hover {
+  background: var(--button-hover-color);
+}
+
 .button-md {
   cursor: pointer;
   display: inline-block;
@@ -118,6 +123,10 @@ a:hover {
   min-width: 23px;
   padding: 8px 16px;
   border-radius: 18px;
+}
+
+.button-md:hover {
+  background: var(--button-hover-color);
 }
 
 .alert {
