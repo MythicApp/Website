@@ -279,6 +279,7 @@ img:hover {
 }
 
 .copyright {
+  max-width: 70%;
   font-size: 12px;
   color: var(--secondary-text);
   margin-left: 10px;
