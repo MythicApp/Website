@@ -251,6 +251,9 @@ img:hover {
 .theme-switcher {
   display: flex;
   align-items: center;
+  border: 1px solid var(--stroke);
+  border-radius: 24px;
+  transition: 0.3s;
 }
 
 .theme-option {
@@ -258,7 +261,6 @@ img:hover {
   background-color: transparent;
   color: var(--secondary-text);
   cursor: pointer;
-  margin-right: 10px;
   padding: 5px;
   font-size: 14px;
   font-family: var(--pro-text);
@@ -266,7 +268,10 @@ img:hover {
 }
 
 .theme-option.active {
+  color: #fff !important;
   font-weight: bold;
+  background-color: var(--button-color);
+  border-radius: 100px;
 }
 
 .theme-option:hover {
