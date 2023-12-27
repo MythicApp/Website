@@ -213,6 +213,43 @@ p {
   font-size: 21px;
 }
 
+.feature_wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
+  max-width: 920px;
+  margin: 50px auto 0;
+
+  gap: 20px;
+}
+
+.card {
+  background-color: var(--secondary-nav-color);
+  border-radius: 10px;
+  border: 1px solid var(--stroke);
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  transition: 0.3s;
+  max-width: 428px;
+
+  animation: card-fade-in 0.4s ease-in-out forwards;
+}
+
+@keyframes card-fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .macos-version {
   font-family: var(--pro-text);
   color: var(--secondary-text);
