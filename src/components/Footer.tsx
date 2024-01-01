@@ -10,6 +10,10 @@ const Footer: React.FC = () => {
         if (savedTheme) {
             setTheme(savedTheme);
             setBodyTheme(savedTheme);
+        } else {
+            const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+            setTheme(systemTheme);
+            setBodyTheme(systemTheme);
         }
     }, []);
 
@@ -40,6 +44,12 @@ const Footer: React.FC = () => {
                     onClick={() => handleThemeChange('dark')}
                 >
                     Dark
+                </button>
+                <button
+                    className={`theme-option ${theme === 'auto' ? 'active' : ''}`}
+                    onClick={() => handleThemeChange('auto')}
+                >
+                    Auto
                 </button>
             </div>
         </footer>
