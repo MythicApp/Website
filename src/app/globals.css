@@ -32,14 +32,13 @@
   --stroke: #3e3e3e;
   --secondary-nav-color: rgba(21, 21, 22);
 
-  --gradient: linear-gradient(to right, #8b5dff, #8d13ff);
+  --gradient: var(--secondary-color);
 }
 
 body {
   background-color: var(--primary-color);
   margin: 0;
   padding-top: 52px;
-  transition: 0.3s;
 }
 
 nav {

@@ -2,30 +2,32 @@
 
 import React, { useState, useEffect } from 'react';
 
-const Footer: React.FC = () => {
-    const [theme, setTheme] = useState<string>('auto');
+const isBrowser = typeof window !== 'undefined';
 
-    useEffect(() => {
+(function() {
+    if (isBrowser) {
         const savedTheme = localStorage.getItem('theme');
         if (savedTheme) {
-            setTheme(savedTheme);
-            setBodyTheme(savedTheme);
-        } else {
-            const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-            setTheme(systemTheme);
-            setBodyTheme(systemTheme);
+            document.body.setAttribute('data-theme', savedTheme);
         }
-    }, []);
+    }
+})();
+
+const Footer: React.FC = () => {
+    const [theme, setTheme] = useState<string>(() => {
+        const savedTheme = isBrowser ? localStorage.getItem('theme') : null;
+        return savedTheme || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    });
+
+    useEffect(() => {
+        document.body.setAttribute('data-theme', theme);
+        localStorage.setItem('theme', theme);
+    }, [theme]);
 
     const handleThemeChange = (selectedTheme: string) => {
         setTheme(selectedTheme);
-        setBodyTheme(selectedTheme);
-        localStorage.setItem('theme', selectedTheme);
     };
 
-    const setBodyTheme = (selectedTheme: string) => {
-        document.body.setAttribute('data-theme', selectedTheme);
-    };
 
     return (
         <footer className="footer">
@@ -44,12 +46,6 @@ const Footer: React.FC = () => {
                     onClick={() => handleThemeChange('dark')}
                 >
                     Dark
-                </button>
-                <button
-                    className={`theme-option ${theme === 'auto' ? 'active' : ''}`}
-                    onClick={() => handleThemeChange('auto')}
-                >
-                    Auto
                 </button>
             </div>
         </footer>
