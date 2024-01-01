@@ -1,4 +1,4 @@
-let metaDescription = "An open-source Epic Games Launcher alternative and normal game launcher for macOS written in Swift. We started this project to create a GUI frontend for Legendary and to play Windows games using game porting toolkit by Apple.";
+let metaDescription = "          An open-source macOS game launcher written in Swift that has the ability to play Windows games through an enhanced implementation of Apple's Game Porting Toolkit. Mythic supports various gaming platforms, currently including Epic Games.";
 
 export const meta = {
   title: "Mythic",
