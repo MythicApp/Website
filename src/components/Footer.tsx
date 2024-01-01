@@ -15,8 +15,8 @@ const isBrowser = typeof window !== 'undefined';
 
 const Footer: React.FC = () => {
     const [theme, setTheme] = useState<string>(() => {
-        const savedTheme = isBrowser ? localStorage.getItem('theme') : null;
-        return savedTheme || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        const savedTheme = localStorage.getItem('theme');
+        return savedTheme ? savedTheme : 'light';
     });
 
     useEffect(() => {
