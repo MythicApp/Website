@@ -28,6 +28,7 @@ export default function Home() {
           src="/app.png"
           width={1012}
           height={562}
+          priority={true}
           alt="Mythic app screenshot"
         />
       </div>
