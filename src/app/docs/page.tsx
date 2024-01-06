@@ -1,56 +1,19 @@
-"use client";
-
-import React, { useState, useEffect } from 'react';
-import ReactMarkdown from 'react-markdown';
-import remarkGfm from 'remark-gfm';
-import Navbar from '../../components/Navbar';
-import Footer from '../../components/Footer';
-
-const Docs = () => {
-    const [selectedOption, setSelectedOption] = useState('Installation');
-    const [content, setContent] = useState('');
-    const [error, setError] = useState('');
-
-    const handleOptionClick = (option: string) => {
-        setSelectedOption(option);
-    };
-
-    useEffect(() => {
-        const fetchContent = async () => {
-            try {
-                const response = await fetch(`https://raw.githubusercontent.com/wiki/MythicApp/Mythic/${selectedOption}.md`);
-                const markdownContent = await response.text();
-                setContent(markdownContent);
-                setError('');
-            } catch (error) {
-                console.error('Error fetching content:', error);
-                setError('Error fetching content');
-            }
-        };
-
-        fetchContent();
-    }, [selectedOption]);
+import Navbar from "../../_components/navigation/navbar";
+import Docsnav from "../../_components/navigation/documentation-navbar";
+import Footer from "../../_components/layout/footer";
+export default function Documentation() {
 
     return (
         <div>
             <Navbar />
-            <div className="docs-nav">
-                <a className="docs-nav-text" onClick={() => handleOptionClick('Installation')}>Installation</a>
-                <a className="docs-nav-text" onClick={() => handleOptionClick('Compatibility')}>Compatibility</a>
+            <Docsnav />
+            <div className="CTA faq_layout">
+                <h1 className="h1-faq">Welcome to Mythic's Documentation</h1>
+                <p>Here you can find things such as how to install and/or use Mythic and more things added by the community such as modifying or building by source.</p>
+                <p>While this page is empty, you can use the navigation bar above to move to another page.</p>
             </div>
-            {error ? (
-                <div className="error">{error}</div>
-            ) : (
-                <div className='CTA'>
-                    <div style={{ textAlign: "left", justifyContent: "center", alignItems: "center" }}>
-                        <ReactMarkdown remarkPlugins={[remarkGfm]}>{content}</ReactMarkdown>
-                    </div>
-                </div>
-            )}
-            <br></br>
-            <Footer />
+
+            {/* <Footer /> */}
         </div>
     );
 };
-
-export default Docs;

@@ -1,8 +1,8 @@
 import Image from "next/image";
-import Navbar from "../components/Navbar";
-import Alert from "../components/Alert";
-import Footer from "../components/Footer";
-import Card from "../components/Card";
+import Navbar from "../_components/navigation/navbar";
+import Alert from "../_components/layout/indev-alert";
+import Footer from "../_components/layout/footer";
+import Card from "../_components/ui/feature-card";
 
 export default function Home() {
   return (
@@ -12,8 +12,7 @@ export default function Home() {
 
       <div className="CTA">
         <h1>
-          <span className="mythic-gradient-text">Mythic</span> is the game launcher that bridges the gap between Windows and
-          Mac.
+          <span className="mythic-gradient-text">Mythic</span> is the game launcher that bridges the gap between Windows and Mac.
         </h1>
         <p>
           An open-source macOS game launcher written in Swift that has the ability to play Windows games through an enhanced implementation of Apple's Game Porting Toolkit.
