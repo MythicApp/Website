@@ -39,10 +39,10 @@ export default function Home() {
         <p className="macos-version" style={{ marginTop: "-10px" }}>We have even more to come, see <span><a href="https://github.com/orgs/MythicApp/projects/2/views/2">roadmap</a></span>.</p>
 
         <div className="feature_wrap">
-          <Card title="Windows Games Natively on Mac" desc="Mythic Engine makes it possible to run and play Windows games on MacOS close as if it were ran natively performance-wise." img="/app.png" />
-          <Card title="Multiple launchers, one place" desc="Mythic makes it very easy to install and play your steam and epic games from Mythic itself with more support to come." img="/app.png" />
-          <Card title="Import your own games" desc="On Mythic you get the freedom to add your own windows games and/or software to run with the Mythic engine." img="/app.png" />
-          <Card title="Finetune the engine" desc="We give interface to GPTK and Whisky (Wine) and allow you to modify everything to your wish and requirements." img="/app.png" />
+          <Card title="Windows Games Natively on Mac" desc="Mythic Engine makes it possible to run and play Windows games the closest to native performance than ever before." img="/app.png" />
+          <Card title="Multiple launchers, one place" desc="Mythic makes it simple to install and play your Epic games from Mythic itself with more launcher support to come. (Including Steam!)" img="/app.png" />
+          <Card title="Import your own games" desc="Mythic gives you the freedom to add and run your own games/software, Mac and Windows alike." img="/app.png" />
+          <Card title="Finetune the engine" desc="Mythic's versatile implementation of GPTK allows the end-user to configure its flags and various settings seamlessly and simply." img="/app.png" />
         </div><br />
 
       </section>

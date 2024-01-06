@@ -2,32 +2,26 @@
 
 import React, { useState, useEffect } from 'react';
 
-const isBrowser = typeof window !== 'undefined';
-
-(function() {
-    if (isBrowser) {
-        const savedTheme = localStorage.getItem('theme');
-        if (savedTheme) {
-            document.body.setAttribute('data-theme', savedTheme);
-        }
-    }
-})();
-
 const Footer: React.FC = () => {
-    const [theme, setTheme] = useState<string>(() => {
-        const savedTheme = localStorage.getItem('theme');
-        return savedTheme ? savedTheme : 'light';
-    });
+    const [theme, setTheme] = useState<string>('auto');
 
     useEffect(() => {
-        document.body.setAttribute('data-theme', theme);
-        localStorage.setItem('theme', theme);
-    }, [theme]);
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme) {
+            setTheme(savedTheme);
+            setBodyTheme(savedTheme);
+        }
+    }, []);
 
     const handleThemeChange = (selectedTheme: string) => {
         setTheme(selectedTheme);
+        setBodyTheme(selectedTheme);
+        localStorage.setItem('theme', selectedTheme);
     };
 
+    const setBodyTheme = (selectedTheme: string) => {
+        document.body.setAttribute('data-theme', selectedTheme);
+    };
 
     return (
         <footer className="footer">
