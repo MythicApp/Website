@@ -10,6 +10,10 @@ const Footer: React.FC = () => {
         if (savedTheme) {
             setTheme(savedTheme);
             setBodyTheme(savedTheme);
+        } else {
+            const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+            setTheme(systemTheme);
+            setBodyTheme(systemTheme);
         }
     }, []);
 
