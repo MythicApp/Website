@@ -6,9 +6,9 @@ interface QuestionProps {
 
 export default function Question({ question, answer, id }: QuestionProps) {
     return (
-            <details>
-                <summary id={id}>{question}</summary>
-                {answer}
-            </details>
+        <details>
+            <summary id={id}>{question}</summary>
+            {answer}
+        </details>
     );
 }

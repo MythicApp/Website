@@ -225,7 +225,7 @@ p {
   text-align: center;
   background-color: var(--secondary-nav-color);
   width: 100vw;
-  max-width:100%;
+  max-width: 100%;
   padding: 15px 0px 15px 0px;
 }
 
