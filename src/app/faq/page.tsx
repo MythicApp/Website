@@ -63,13 +63,13 @@ export default function Faq() {
           question="Is Mythic free?"
           answer="Yes, Mythic is free and completely open-source software, meaning the community can contribute and help shape the future of Mythic!"
           id="9"
-        />
+        /><Divider />
 
         <Question
           question="How does the launcher itself perform?"
           answer="My current benchmarks indicate around 150MB of RAM usage in the library, while home hovers at approximately 100MB of RAM during onboarding. Everything else remains at a maximum of around 55MB of RAM. As for size, the launcher itself is relatively small, while GPTK is only 1.8GB uncompressed and 600MB when compressed."
           id="10"
-        /><Divider />
+        />
       </div>
 
       <br /><br />
