@@ -17,8 +17,6 @@
   --navbar-color: rgba(255, 255, 255, 0.9);
   --stroke: #dbdbdb;
   --secondary-nav-color: #f8f8f9;
-
-  --gradient: linear-gradient(to right, #5412F6, #7E1ED8);
 }
 
 [data-theme="dark"] {
@@ -31,8 +29,6 @@
   --navbar-color: rgba(21, 21, 22, 0.9);
   --stroke: #3e3e3e;
   --secondary-nav-color: rgba(21, 21, 22);
-
-  --gradient: var(--secondary-color);
 }
 
 body {
@@ -234,7 +230,7 @@ p {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  align-items: center;
+  align-items: top;
   justify-content: center;
   max-width: 920px;
   margin: 50px auto 0;
@@ -271,10 +267,26 @@ p {
 }
 
 .mythic-gradient-text {
-  background: var(--gradient);
-  background-clip: text;
-  color: transparent;
   display: inline;
+  max-width: 731px;
+  --color-one: #5412F6;
+  --color-two: #7E1ED8;
+  --bg-size: 400%;
+  font-size: 40px;
+  background: linear-gradient(90deg,
+      var(--color-one),
+      var(--color-two),
+      var(--color-one)) 0 0 / var(--bg-size) 100%;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: move-bg 8s infinite linear;
+}
+
+@keyframes move-bg {
+  to {
+    background-position: var(--bg-size) 0;
+  }
 }
 
 img {

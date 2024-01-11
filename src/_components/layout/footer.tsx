@@ -30,7 +30,7 @@ const Footer: React.FC = () => {
     return (
         <footer className="footer">
             <div className="copyright">
-                &copy; {new Date().getFullYear()} Mythic. All rights reserved. Not affiliated with Apple or other game launchers.
+                &copy; {new Date().getFullYear()} Mythic. All rights reserved. Not affiliated with Apple or any game platform.
             </div>
             <div className="theme-switcher">
                 <button
