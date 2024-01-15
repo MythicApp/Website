@@ -55,7 +55,7 @@ export default function Faq() {
 
         <Question
           question="What games run using Mythic?"
-          answer="Almost any game or app that runs on Windows can run on Mythic (via GPTK), with the exception of games that use the Windows UWP platform and games that use Anti-cheat. Whether support for this will come is unknown and will come at the discretion of those working on wine. For a (currently limited) list of games that have been tested, visit the docs."
+          answer="Almost any game or app that runs on Windows can run on Mythic (via GPTK), with the exception of games that use the Windows UWP platform and games that use Anti-cheat(Not all Anti-cheats are incompatible). Whether support for this will come is unknown and will come at the discretion of those working on wine. For a (currently limited) list of games that have been tested, visit the docs."
           id="8"
         /><Divider />
 

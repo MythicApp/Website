@@ -248,6 +248,10 @@ p {
   animation: card-fade-in 0.4s ease-in-out forwards;
 }
 
+.card .button-md {
+  width: 100px;
+}
+
 @keyframes card-fade-in {
   0% {
     opacity: 0;
