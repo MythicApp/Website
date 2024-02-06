@@ -284,7 +284,7 @@ p {
   color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
-  animation: move-bg 8s infinite linear;
+  animation: move-bg 40s infinite linear;
 }
 
 @keyframes move-bg {
