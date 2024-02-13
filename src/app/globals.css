@@ -248,6 +248,10 @@ p {
   animation: card-fade-in 0.4s ease-in-out forwards;
 }
 
+.card h2 {
+  margin-bottom: 0;
+}
+
 .card .button-md {
   width: 100px;
 }
