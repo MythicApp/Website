@@ -69,7 +69,7 @@ export default function Home() {
             href="https://github.com/mythicapp"
             button="To Github"
             target="_blank"
-          /><br />
+          />
 
           <Card
             icon="discord"
