@@ -3,7 +3,6 @@
 import React, { useState, useEffect } from "react";
 import Navbar from "../../../_components/navigation/navbar";
 import Docsnav from "../../../_components/navigation/documentation-navbar";
-import Footer from "../../../_components/layout/footer";
 
 interface Game {
     game_name: string;
@@ -12,11 +11,11 @@ interface Game {
 }
 
 export default function Compatibility() {
-    const [loading, setLoading] = useState<boolean>(true);
+    const [loading, setLoading] = useState(true);
     const [games, setGames] = useState<Game[]>([]);
-    const [searchTerm, setSearchTerm] = useState<string>("");
+    const [searchTerm, setSearchTerm] = useState("");
     const [filteredGames, setFilteredGames] = useState<Game[]>([]);
-    const [initialLoadTime, setInitialLoadTime] = useState<number>(0);
+    const [initialLoadTime, setInitialLoadTime] = useState(0);
 
     useEffect(() => {
         setInitialLoadTime((Date.now() - performance.timing.navigationStart) / 1000);
@@ -38,29 +37,13 @@ export default function Compatibility() {
     }, []);
 
     useEffect(() => {
-        setFilteredGames(
-            games.filter((game: Game) =>
-                game.game_name.toLowerCase().includes(searchTerm.toLowerCase())
-            )
-        );
+        setFilteredGames(games.filter((game) => game.game_name.toLowerCase().includes(searchTerm.toLowerCase())));
     }, [games, searchTerm]);
 
     const renderGameRating = (game: Game) => {
+        const ratings = ["Doesn't run", "Unplayable", "Runs", "Playable", "Perfect", "Unknown"];
         const averageRating = parseInt(game.game_rating);
-        let ratingText = "";
-        if (averageRating === 1) {
-            ratingText = "Doesn't run";
-        } else if (averageRating === 2) {
-            ratingText = "Unplayable";
-        } else if (averageRating === 3) {
-            ratingText = "Runs";
-        } else if (averageRating === 4) {
-            ratingText = "Playable";
-        } else if (averageRating === 5) {
-            ratingText = "Perfect";
-        } else {
-            ratingText = "Unknown";
-        }
+        const ratingText = ratings[averageRating - 1] || "Unknown";
         return ratingText;
     };
 
@@ -77,7 +60,10 @@ export default function Compatibility() {
                         value={searchTerm}
                         onChange={(e) => setSearchTerm(e.target.value)}
                     />
-                    <p>Total games: {filteredGames.length} {searchTerm ? 'found' : 'loaded'} {loading ? '...' : (searchTerm ? '' : `in ${initialLoadTime.toFixed(2)} seconds`)}</p>
+                    <p>
+                        Total games: {filteredGames.length} {searchTerm ? "found" : "loaded"}{" "}
+                        {loading ? "..." : searchTerm ? "" : `in ${initialLoadTime.toFixed(2)} seconds`}
+                    </p>
                     {loading ? (
                         <p>Fetching games...</p>
                     ) : (
@@ -90,7 +76,7 @@ export default function Compatibility() {
                                 </tr>
                             </thead>
                             <tbody>
-                                {filteredGames.map((game: Game) => (
+                                {filteredGames.map((game) => (
                                     <tr key={game.game_name}>
                                         <td>{game.game_name}</td>
                                         <td>{renderGameRating(game)}</td>
@@ -102,8 +88,6 @@ export default function Compatibility() {
                     )}
                 </div>
             </div>
-
-            {/* <Footer /> */}
         </div>
     );
-};
+}

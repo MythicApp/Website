@@ -1,10 +1,29 @@
 import Image from "next/image";
 import Navbar from "../_components/navigation/navbar";
 import Alert from "../_components/layout/indev-alert";
-import Footer from "../_components/layout/footer";
 import Card from "../_components/ui/card";
+import Footer from "../_components/layout/footer";
 
 export default function Home() {
+  const cards = [
+    {
+      title: "Windows Games Natively on Mac",
+      desc: "Run and play Windows games with native performance.",
+    },
+    {
+      title: "Multiple launchers, one place",
+      desc: "Install and play Epic games from Mythic itself.",
+    },
+    {
+      title: "Import your own games",
+      desc: "Add and run your own games/software, Mac and Windows alike.",
+    },
+    {
+      title: "Finetune the engine",
+      desc: "Configure engine flags and settings seamlessly.",
+    },
+  ];
+
   return (
     <div>
       <Navbar />
@@ -32,32 +51,23 @@ export default function Home() {
       </div>
 
       <section className="features">
-
         <h1>What does Mythic offer?</h1>
-        <p className="macos-version" style={{ marginTop: "-10px" }}>We have even more to come, see <span><a href="https://github.com/orgs/MythicApp/projects/2/views/2">roadmap</a></span>.</p>
+        <p className="macos-version" style={{ marginTop: "-10px" }}>
+          We have even more to come, see{" "}
+          <span>
+            <a href="https://github.com/orgs/MythicApp/projects/2/views/2">
+              roadmap
+            </a>
+          </span>
+          .
+        </p>
 
         <div className="feature_wrap">
-          <Card
-            title="Windows Games Natively on Mac"
-            desc="Our engine makes it possible to run and play Windows games the closer to native performance than ever before. Our launcher is written in Swift to make the feel as close to native as it can be."
-          />
-
-          <Card
-            title="Multiple launchers, one place"
-            desc="Mythic makes it simple to install and play your Epic games from Mythic itself with more launcher support to come. (Including Steam!)"
-          />
-
-          <Card
-            title="Import your own games"
-            desc="Mythic gives you the freedom to add and run your own games/software, Mac and Windows alike."
-          />
-
-          <Card
-            title="Finetune the engine"
-            desc="Mythic's versatile implementation of GPTK allows the end-user to configure its flags and various settings seamlessly and simply."
-          />
-        </div><br />
-
+          {cards.map((card, index) => (
+            <Card key={index} title={card.title} desc={card.desc} />
+          ))}
+        </div>
+        <br />
       </section>
 
       <section>
@@ -65,7 +75,7 @@ export default function Home() {
           <Card
             icon="github"
             title="Join the community"
-            desc="Mythic is completely open-sourced, which means you can provide your own skill and help shape the app through a pull request, if there is a bug or you have an idea for a new feature, you can also create an issue there."
+            desc="Contribute to Mythic through pull requests and issues on GitHub."
             href="https://github.com/mythicapp"
             button="To Github"
             target="_blank"
@@ -74,14 +84,15 @@ export default function Home() {
           <Card
             icon="discord"
             title="You can help shape Mythic"
-            desc="We have an awesome community on Discord, it comes with alot of perks like being the first to know when there is a new update, leaks, and discussion about the product overall. We'd love to see you soon!"
+            desc="Join our Discord community for updates and discussions."
             href="https://discord.gg/58NZ7fFqPy"
             button="Join Discord"
             target="_blank"
           />
-        </div><br /><br />
+        </div>
+        <br />
+        <br />
       </section>
-
       <Footer />
     </div>
   );

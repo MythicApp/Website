@@ -17,6 +17,9 @@
   --navbar-color: rgba(255, 255, 255, 0.9);
   --stroke: #dbdbdb;
   --secondary-nav-color: #f8f8f9;
+
+  --color-one: #9041c9;
+  --color-two: #8911f9;
 }
 
 [data-theme="dark"] {
@@ -29,6 +32,9 @@
   --navbar-color: rgba(21, 21, 22, 0.9);
   --stroke: #3e3e3e;
   --secondary-nav-color: rgba(21, 21, 22);
+
+  --color-one: #ffffff;
+  --color-two: #ffffff;
 }
 
 body {
@@ -193,6 +199,23 @@ a:hover {
   flex-direction: column;
 }
 
+.CTA-Screenshot {
+  opacity: 0;
+  animation: pop-in 1s ease-in-out forwards;
+  animation-delay: 0.1s;
+}
+
+@keyframes pop-in {
+  0% {
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .faq_layout {
   display: flex;
   width: 100%;
@@ -276,11 +299,8 @@ p {
 
 .mythic-gradient-text {
   display: inline;
-  max-width: 731px;
-  --color-one: #5412F6;
-  --color-two: #7E1ED8;
   --bg-size: 400%;
-  font-size: 40px;
+  font-size: 60px;
   background: linear-gradient(90deg,
       var(--color-one),
       var(--color-two),
@@ -292,8 +312,24 @@ p {
 }
 
 @keyframes move-bg {
-  to {
-    background-position: var(--bg-size) 0;
+  0% {
+    background-position: 0 0;
+  }
+
+  25% {
+    background-position: 100% 0;
+  }
+
+  50% {
+    background-position: 100% 100%;
+  }
+
+  75% {
+    background-position: 0 100%;
+  }
+
+  100% {
+    background-position: 0 0;
   }
 }
 
@@ -417,7 +453,7 @@ details {
   font-size: 20px;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 903px) {
   table {
     font-size: 14px;
   }
@@ -426,10 +462,7 @@ details {
   td {
     padding: 6px;
   }
-}
 
-
-@media only screen and (max-width: 768px) {
   .logo {
     padding-left: 20px;
     font-size: 18px;
@@ -450,6 +483,10 @@ details {
     max-width: 550px;
     margin-top: 32px;
     padding-top: 52px;
+  }
+
+  .mythic-gradient-text {
+    font-size: 36px;
   }
 
   h1 {

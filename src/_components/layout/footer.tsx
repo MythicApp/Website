@@ -3,28 +3,18 @@
 import React, { useState, useEffect } from 'react';
 
 const Footer: React.FC = () => {
-    const [theme, setTheme] = useState<string>('auto');
+    const [theme, setTheme] = useState<string>(() => {
+        const savedTheme = typeof sessionStorage !== 'undefined' ? sessionStorage.getItem('theme') : null;
+        return savedTheme || (typeof window !== 'undefined' && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    });
 
     useEffect(() => {
-        const savedTheme = localStorage.getItem('theme');
-        if (savedTheme) {
-            setTheme(savedTheme);
-            setBodyTheme(savedTheme);
-        } else {
-            const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-            setTheme(systemTheme);
-            setBodyTheme(systemTheme);
-        }
-    }, []);
+        document.body.setAttribute('data-theme', theme);
+        sessionStorage.setItem('theme', theme);
+    }, [theme]);
 
     const handleThemeChange = (selectedTheme: string) => {
         setTheme(selectedTheme);
-        setBodyTheme(selectedTheme);
-        localStorage.setItem('theme', selectedTheme);
-    };
-
-    const setBodyTheme = (selectedTheme: string) => {
-        document.body.setAttribute('data-theme', selectedTheme);
     };
 
     return (

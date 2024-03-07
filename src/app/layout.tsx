@@ -33,6 +33,7 @@ export default function RootLayout({
         <meta name="referrer" content="no-referrer-when-downgrade" />
         <meta httpEquiv="content-language" content="en-US" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+        <title>Mythic</title>
       </head>
       <body>{children}</body>
     </html>
