@@ -4,12 +4,12 @@ import React, { useState } from 'react';
 import { setTheme, handleThemeChange } from '@/utils/theme';
 
 const Footer: React.FC = () => {
-const [theme, setThemeState] = useState<string>(setTheme() || '');
+  const [theme, setThemeState] = useState<string>(setTheme() || '');
 
-const handleThemeClick = (selectedTheme: string) => {
+  const handleThemeClick = (selectedTheme: string) => {
     const newTheme = handleThemeChange(selectedTheme);
     setThemeState(newTheme);
-};
+  };
 
   return (
     <footer className="footer">
@@ -20,12 +20,14 @@ const handleThemeClick = (selectedTheme: string) => {
         <button
           className={`theme-option ${theme === 'light' ? 'active' : ''}`}
           onClick={() => handleThemeClick('light')}
+          id='lightTheme'
         >
           Light
         </button>
         <button
           className={`theme-option ${theme === 'dark' ? 'active' : ''}`}
           onClick={() => handleThemeClick('dark')}
+          id='darkTheme'
         >
           Dark
         </button>
