@@ -401,6 +401,7 @@ input {
   border-radius: 8px;
   outline: none;
   transition: 0.3s;
+  background-color: var(--primary-color);
 }
 
 table {
