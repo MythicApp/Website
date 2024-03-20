@@ -257,8 +257,7 @@ p {
   justify-content: center;
   max-width: 920px;
   margin: 50px auto 0;
-
-  gap: 20px;
+  gap: 40px 20px;
 }
 
 .card {
