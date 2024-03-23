@@ -265,8 +265,6 @@ p {
   flex-direction: column;
   transition: 0.3s;
   max-width: 428px;
-
-  animation: card-fade-in 0.4s ease-in-out forwards;
 }
 
 .card h2 {
