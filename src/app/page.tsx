@@ -7,20 +7,37 @@ import Footer from "../_components/layout/footer";
 export default function Home() {
   const cards = [
     {
-      title: "Windows Games Natively on Mac",
-      desc: "Run and play Windows games with native performance.",
+      title: "Windows Games on Mac",
+      desc: "Run and play Windows games with as close to native performance you'll get.",
     },
     {
       title: "Multiple launchers, one place",
-      desc: "Install and play Epic games from Mythic itself.",
+      desc: "Install and play Epic games from Mythic itself. With steam and others to come.",
     },
     {
       title: "Import your own games",
-      desc: "Add and run your own games/software, Mac and Windows alike.",
+      desc: "Add and run your own macOS or Windows games/software through Mythic.",
     },
     {
-      title: "Finetune the engine",
-      desc: "Configure engine flags and settings seamlessly.",
+      title: "Finetune your bottle",
+      desc: "Enable, disable certain startup flags like retina mode or performance hud.",
+    },
+  ];
+
+  const socials = [
+    {
+      icon: "github",
+      title: "Join the community",
+      desc: "Contribute to Mythic through pull requests and issues on GitHub.",
+      href: "https://github.com/mythicapp",
+      button: "To Github",
+    },
+    {
+      icon: "discord",
+      title: "You can help shape Mythic",
+      desc: "Join our Discord community for updates and discussions.",
+      href: "https://discord.gg/58NZ7fFqPy",
+      button: "Join Discord",
     },
   ];
 
@@ -72,23 +89,9 @@ export default function Home() {
 
       <section>
         <div className="feature_wrap">
-          <Card
-            icon="github"
-            title="Join the community"
-            desc="Contribute to Mythic through pull requests and issues on GitHub."
-            href="https://github.com/mythicapp"
-            button="To Github"
-            target="_blank"
-          />
-
-          <Card
-            icon="discord"
-            title="You can help shape Mythic"
-            desc="Join our Discord community for updates and discussions."
-            href="https://discord.gg/58NZ7fFqPy"
-            button="Join Discord"
-            target="_blank"
-          />
+          {socials.map((social, index) => (
+            <Card key={index} icon={social.icon} title={social.title} desc={social.desc} href={social.href} button={social.button} target="_blank" />
+          ))}
         </div>
         <br />
         <br />

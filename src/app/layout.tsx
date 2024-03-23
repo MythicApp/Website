@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import './globals.css'
-import ThemeWrapper from '@/_components/wrappers/themeWrapper';
+import ThemeWrapper from '@/wrappers/themeWrapper';
 
 export const metadata: Metadata = {
   title: 'Mythic',
