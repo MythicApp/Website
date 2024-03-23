@@ -55,7 +55,6 @@ nav {
   background-color: var(--navbar-color);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--stroke);
-  transition: all 0.3s ease-in-out;
 }
 
 .logo {
