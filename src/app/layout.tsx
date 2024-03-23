@@ -1,11 +1,6 @@
-import type { Metadata } from 'next'
 import './globals.css'
 import ThemeWrapper from '@/wrappers/themeWrapper';
-
-export const metadata: Metadata = {
-  title: 'Mythic',
-  description: 'An open-source Epic Games Launcher alternative and normal game launcher for macOS written in Swift. We started this project to create a GUI frontend for Legendary and to play Windows games using game porting toolkit by Apple.',
-}
+import meta from '../../next-seo.config';
 
 export default function RootLayout({
   children,
@@ -16,26 +11,29 @@ export default function RootLayout({
     <ThemeWrapper>
       <html lang="en">
         <head>
-          <meta name="robots" content="index, follow" />
-          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-          <link rel="canonical" href="https://getmythic.app" />
-          <meta name="theme-color" content="#a046ff" />
-          <meta property="og:url" content="https://getmythic.app" />
-          <meta property="og:type" content="website" />
-          <meta property="og:site_name" content="Mythic" />
-          <meta property="og:image" content="https://getmythic.app/ogimage.png" />
-          <meta property="og:locale" content="en_US" />
-          <meta name="twitter:card" content="summary_large_image" />
-          <meta name="twitter:title" content="Mythic" />
-          <meta name="twitter:description" content="An open-source Epic Games Launcher alternative and normal game launcher for macOS written in Swift. We started this project to create a GUI frontend for Legendary and to play Windows games using game porting toolkit by Apple." />
-          <meta name="twitter:site" content="@mythicapp" />
-          <meta name="twitter:image" content="https://getmythic.app/ogimage.png" />
-          <meta name="author" content="Mythic, Jeremy, Jecta, blackxfiied" />
-          <meta name="keywords" content="mythic, macos, gaming, mac, apple" />
-          <meta name="referrer" content="no-referrer-when-downgrade" />
-          <meta httpEquiv="content-language" content="en-US" />
-          <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-          <title>Mythic</title>
+          <meta name="robots" content={meta.robots} />
+          <meta name="viewport" content={meta.viewport} />
+          <link rel="canonical" href={meta.canonical} />
+          <meta name="theme-color" content={meta.themeColor} />
+          <meta name="description" content={meta.description} />
+          <meta property="og:title" content={meta.og.title} />
+          <meta property="og:description" content={meta.og.description} />
+          <meta property="og:url" content={meta.og.url} />
+          <meta property="og:type" content={meta.og.type} />
+          <meta property="og:site_name" content={meta.og.site_name} />
+          <meta property="og:image" content={meta.og.image} />
+          <meta property="og:locale" content={meta.og.locale} />
+          <meta name="twitter:card" content={meta.twitter.card} />
+          <meta name="twitter:title" content={meta.twitter.title} />
+          <meta name="twitter:description" content={meta.twitter.description} />
+          <meta name="twitter:site" content={meta.twitter.site} />
+          <meta name="twitter:image" content={meta.twitter.image} />
+          <meta name="author" content={meta.author} />
+          <meta name="keywords" content={meta.keywords} />
+          <meta name="referrer" content={meta.referrer} />
+          <meta httpEquiv="content-language" content={meta.httpEquiv["content-language"]} />
+          <meta httpEquiv="X-UA-Compatible" content={meta.httpEquiv["X-UA-Compatible"]} />
+          <title>{meta.title}</title>
         </head>
         <body>{children}</body>
       </html>

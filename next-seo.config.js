@@ -1,29 +1,40 @@
-let metaDescription = "An open-source macOS game launcher written in Swift that has the ability to play Windows games through an enhanced implementation of Apple's Game Porting Toolkit. Mythic supports various gaming platforms, currently including Epic Games.";
+let metaTitle = "Mythic";
+let metaDescription = "An open-source Epic Games Launcher alternative and normal game launcher for macOS written in Swift. We started this project to create a GUI frontend for Legendary and to play Windows games using game porting toolkit by Apple.";
+let metaUrl = "https://getmythic.app";
+let metaImage = "https://getmythic.app/ogimage.png";
 
-export const meta = {
-  title: "Mythic",
+const meta = {
+  title: metaTitle,
   description: metaDescription,
-  image: "https://getmythic.app/ogimage.png",
-  url: "https://getmythic.app",
+  image: metaImage,
+  url: metaUrl,
+  canonical: metaUrl,
+  themeColor: "#a046ff",
   og: {
-    locale: "en_US",
-    type: "website",
-    title: "Mythic",
+    title: metaTitle,
     description: metaDescription,
-    image: "https://getmythic.app/ogimage.png",
-    embedColor: "#a046ff",
-    imageWidth: 1200,
-    imageHeight: 630,
-    siteName: "Mythic",
+    url: metaUrl,
+    type: "website",
+    site_name: metaTitle,
+    image: metaImage,
+    locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
-    domain: "https://getmythic.app",
-    url: "https://getmythic.app",
-    title: "Mythic",
+    title: metaTitle,
     description: metaDescription,
-    image: "https://getmythic.app/ogimage.png",
-    imageWidth: 1200,
-    imageHeight: 630,
+    site: "@mythicapp",
+    image: metaImage,
   },
+  author: "Mythic, Jeremy, Jecta, blackxfiied",
+  keywords: "mythic, macos, gaming, mac, apple",
+  referrer: "no-referrer-when-downgrade",
+  httpEquiv: {
+    "content-language": "en-US",
+    "X-UA-Compatible": "IE=edge",
+  },
+  robots: "index, follow",
+  viewport: "width=device-width, initial-scale=1.0",
 };
+
+export default meta;
