@@ -7,7 +7,7 @@ import Footer from "../_components/layout/footer";
 export default function Home() {
   const cards = [
     {
-      title: "Windows Games on Mac",
+      title: "Windows games, on Mac",
       desc: "Run and play Windows games with as close to native performance you'll get.",
     },
     {
@@ -15,12 +15,12 @@ export default function Home() {
       desc: "Install and play Epic games from Mythic itself. With steam and others to come.",
     },
     {
-      title: "Import your own games",
+      title: "Import your own titles",
       desc: "Add and run your own macOS or Windows games/software through Mythic.",
     },
     {
       title: "Finetune your bottle",
-      desc: "Enable, disable certain startup flags like retina mode or performance hud.",
+      desc: "Enable or disable certain startup flags like Retina mode or performance HUD.",
     },
   ];
 
@@ -30,14 +30,14 @@ export default function Home() {
       title: "Join the community",
       desc: "Contribute to Mythic through pull requests and issues on GitHub.",
       href: "https://github.com/mythicapp",
-      button: "To Github",
+      button: "To GitHub",
     },
     {
       icon: "discord",
       title: "You can help shape Mythic",
       desc: "Join our Discord community for updates and discussions.",
       href: "https://discord.gg/58NZ7fFqPy",
-      button: "Join Discord",
+      button: "Join the Discord",
     },
   ];
 
@@ -48,13 +48,13 @@ export default function Home() {
 
       <div className="CTA">
         <h1 className="mythic-gradient-text">
-          Meet Mythic. The best way to play Windows games on the Mac.
+          Meet Mythic. The best way to play Windows games on Mac.
         </h1>
         <p style={{ marginTop: "-1px" }}>
-          An open-source macOS game launcher to play Windows games through our implementation of Apple's Game Porting Toolkit and many game platforms, currently including Epic Games.
+          An open-source macOS game launcher to play Windows games through our implementation of Apple's Game Porting Toolkit - supporting many launchers, currently including Epic Games.
         </p>
         <a className="button-md" href="/waitlist">
-          Join Waitlist
+          Join the waitlist
         </a>
         <p className="macos-version">for macOS 14+</p>
         <Image
