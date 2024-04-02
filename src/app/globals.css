@@ -85,19 +85,13 @@ a:hover {
 
 .button {
   cursor: pointer;
-  display: inline-block;
+  display: flex;
   text-align: center;
-  white-space: nowrap;
+  justify-content: center;
   background: var(--button-color);
   color: rgb(255, 255, 255) !important;
-  border: 0px;
-  outline: 0px;
   font-size: 12px;
-  line-height: 1.33337;
-  font-weight: 400;
-  letter-spacing: -0.01em;
   font-family: var(--pro-text);
-  min-width: 23px;
   padding: 4px 11px;
   border-radius: 12px;
 }
@@ -108,19 +102,13 @@ a:hover {
 
 .button-md {
   cursor: pointer;
-  display: inline-block;
+  display: flex;
   text-align: center;
-  white-space: nowrap;
+  justify-content: center;
   background: var(--button-color);
   color: rgb(255, 255, 255) !important;
-  border: 0px;
-  outline: 0px;
   font-size: 16px;
-  line-height: 1.33337;
-  font-weight: 400;
-  letter-spacing: -0.01em;
   font-family: var(--pro-text);
-  min-width: 23px;
   padding: 8px 16px;
   border-radius: 18px;
 }
@@ -272,7 +260,7 @@ p {
 }
 
 .card .button-md {
-  width: 100px;
+  width: fit-content;
 }
 
 @keyframes card-fade-in {

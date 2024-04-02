@@ -18,14 +18,14 @@ const Footer: React.FC = () => {
       </div>
       <div className="theme-switcher">
         <button
-          className={`theme-option ${theme === 'light' ? 'active' : ''}`}
+          className={`theme-option ${theme === 'light' ? 'active' : ''}`.trim()}
           onClick={() => handleThemeClick('light')}
           id='lightTheme'
         >
           Light
         </button>
         <button
-          className={`theme-option ${theme === 'dark' ? 'active' : ''}`}
+          className={`theme-option ${theme === 'dark' ? 'active' : ''}`.trim()}
           onClick={() => handleThemeClick('dark')}
           id='darkTheme'
         >
