@@ -1,6 +1,7 @@
 import './globals.css'
 import ThemeWrapper from '@/wrappers/themeWrapper';
 import meta from '../../next-seo.config';
+import { Analytics } from "@vercel/analytics/react"
 
 export default function RootLayout({
   children,
@@ -37,6 +38,7 @@ export default function RootLayout({
         </head>
         <body>{children}</body>
       </html>
+      <Analytics />
     </ThemeWrapper>
   )
 }
