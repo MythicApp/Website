@@ -14,7 +14,7 @@ const Footer: React.FC = () => {
   return (
     <footer className="footer">
       <div className="copyright">
-        &copy; {new Date().getFullYear()} Mythic. All rights reserved. Not affiliated with Apple or any game platform.
+        &copy; {new Date().getFullYear()} Mythic. All rights reserved. Not affiliated with Apple or any games/platforms.
       </div>
       <div className="theme-switcher">
         <button

@@ -44,7 +44,7 @@ export default function Home() {
   return (
     <div>
       <Navbar />
-      <Alert />
+      {/* <Alert /> */}
 
       <div className="CTA">
         <h1 className="mythic-gradient-text">
@@ -53,8 +53,8 @@ export default function Home() {
         <p style={{ marginTop: "-1px" }}>
           An open-source macOS game launcher to play Windows games through our implementation of Apple's Game Porting Toolkit - supporting many launchers, currently including Epic Games.
         </p>
-        <a className="button-md" href="/waitlist">
-          Join the waitlist
+        <a className="button-md" href="/download">
+          Download Alpha
         </a>
         <p className="macos-version">for macOS 14+</p>
         <Image

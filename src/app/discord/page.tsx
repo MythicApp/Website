@@ -15,7 +15,7 @@ export default function Waitlist() {
 
     useEffect(() => {
         const redirectTimeout = setTimeout(() => {
-            window.location.href = 'https://github.com/MythicApp/Mythic/releases';
+            window.location.href = 'https://discord.gg/58NZ7fFqPy';
         }, 2000);
 
         return () => clearTimeout(redirectTimeout);
@@ -23,7 +23,7 @@ export default function Waitlist() {
 
     return (
         <div className="CTA">
-            <p className="description">Redirecting to download{dots}</p>
+            <p className="description">Redirecting to discord{dots}</p>
         </div>
     );
 }

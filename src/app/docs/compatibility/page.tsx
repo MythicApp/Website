@@ -54,6 +54,7 @@ export default function Compatibility() {
             <div className="CTA">
                 <div style={{ textAlign: "left", justifyContent: "center", alignItems: "center" }}>
                     <h1>Compatibility Database</h1>
+                    <p>This database is not in sync with Mythic users their experience at this time but from external sources.</p>
                     <input
                         type="text"
                         placeholder="Search by game name"

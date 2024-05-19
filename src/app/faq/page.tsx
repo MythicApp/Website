@@ -22,11 +22,7 @@ export default function Faq() {
     },
     {
       question: "What are the system requirements for Mythic?",
-      answer: "Mythic is only available for macOS 14+. ~550 MB RAM at the most, but Mythic is always being optimized with every update. ~2 GB of storage (the Mythic Engine is ~1.8 GB in size, and the Mythic app is roughly 30 MB in size.) Please bear in mind that this information is from an unoptimized prerelease, so these statistics will improve."
-    },
-    {
-      question: "How do I download and install Mythic?",
-      answer: "A stable release is not yet ready, but the source code can be downloaded from our GitHub if you wish to get an early build. Please keep in mind that we do not yet offer support, as the app's functionality is not yet complete. For a more detailed guide on how to install Mythic, check out the docs."
+      answer: "Mythic is only available for macOS 14+. ~550 MB RAM at the most, but Mythic is always being optimized with every update. ~2 GB of storage (the Mythic Engine is ~1.8 GB in size, and the Mythic app is roughly 30 MB in size.) Please bear in mind that this information is from an unoptimized alpha release, so these statistics will improve."
     },
     {
       question: "Can I import my own games (non-launcher)?",
