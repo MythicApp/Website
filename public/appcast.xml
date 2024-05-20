@@ -1,0 +1,14 @@
+<?xml version="1.0" standalone="yes"?>
+<rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" version="2.0">
+    <channel>
+        <title>Mythic</title>
+        <item>
+            <title>0.1.1-alpha</title>
+            <pubDate>Mon, 20 May 2024 22:03:54 +0800</pubDate>
+            <sparkle:version>2630</sparkle:version>
+            <sparkle:shortVersionString>0.1.1-alpha</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <enclosure url="https://cast.appcastify.com/blackxfiied/Mythic.zip" length="15642249" type="application/octet-stream" sparkle:edSignature="MoePtVLFmZe92vwal8398hfpH3iSnSsBfMAkeJ++KsO00x2Ut3S0F/xd6GZWb0X0aTFvHsJ2PcKMGOIe06JWAw=="/>
+       </item>
+    </channel>
+</rss>
