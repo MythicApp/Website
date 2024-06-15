@@ -1,0 +1,32 @@
+---
+const getThemeFromLocalStorage = () => {
+  return typeof window !== "undefined"
+    ? localStorage.getItem("theme") || "light"
+    : "light";
+};
+
+let theme = getThemeFromLocalStorage();
+---
+
+<footer class="footer">
+  <div class="copyright">
+    &copy; {new Date().getFullYear()} Mythic. All rights reserved. Not affiliated
+    with Apple or any games/platforms.
+  </div>
+  <div class="theme-switcher">
+    <button
+      class={`theme-option ${theme === "light" ? "active" : ""}`.trim()}
+      id="lightTheme"
+    >
+      Light
+    </button>
+    <button
+      class={`theme-option ${theme === "dark" ? "active" : ""}`.trim()}
+      id="darkTheme"
+    >
+      Dark
+    </button>
+  </div>
+</footer>
+
+<script src="/theme.js" defer></script>

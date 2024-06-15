@@ -1,0 +1,169 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/navigation/Navbar.astro";
+
+import { Image } from "astro:assets";
+import CTALogo from "../images/logo.png";
+import CTAImage from "../images/app.png";
+
+import FeatureSection from "../components/sections/FeatureSection.astro";
+
+import AccountsScreenshot from "../images/accounts.png";
+import ImportScreenshot from "../images/import.png";
+import BottlesSCreenshot from "../images/bottles.png";
+
+import SocialCard from "../components/ui/SocialCard.astro";
+
+import Footer from "../components/navigation/Footer.astro";
+
+const features = [
+  {
+    title: "Multiple launchers, one place",
+    desc: "Install, set up, and launch all your games from an external launcher, from Epic, or by yourself.",
+    image: AccountsScreenshot,
+  },
+  {
+    title: "Import your own titles",
+    desc: "Epic not enough? Import your own macOS or Windows® titles directly into Mythic, and the rest is history.",
+    image: ImportScreenshot,
+  },
+  {
+    title: "Virtualized your way",
+    desc: "Create multiple environments of Windows® directly within Mythic, and keep all your games isolated safely from one another.",
+    image: BottlesSCreenshot,
+  },
+];
+
+const socials = [
+  {
+    icon: "github",
+    title: "Join the community",
+    desc: "Contribute to Mythic through pull requests and issues on GitHub.",
+    href: "/github",
+    button: "To GitHub",
+  },
+  {
+    icon: "discord",
+    title: "You can help shape Mythic",
+    desc: "Join our Discord community for updates and discussions.",
+    href: "/discord",
+    button: "Join the Discord",
+  },
+];
+---
+
+<Layout title="Mythic">
+  <Navbar />
+  <Image
+    src={CTALogo}
+    loading="eager"
+    class="ctalogo"
+    alt="Mythic logo"
+    height={"124"}
+  />
+  <h1 class="mythic-gradient-text">
+    Meet Mythic. The best way to play Windows games on Mac.
+  </h1>
+  <p>
+    An open-source macOS game launcher to play Windows games through our
+    implementation of Apple's Game Porting Toolkit - supporting many launchers.
+  </p>
+  <a class="button-md" href="/download"> Download Alpha </a>
+  <p class="macos-version">for macOS 14+</p>
+  <Image
+    class="CTA-Screenshot"
+    src={CTAImage}
+    loading="eager"
+    alt="Mythic app screenshot"
+    inferSize;
+  />
+
+  {
+    features.map((feature, index) => (
+      <FeatureSection
+        title={feature.title}
+        desc={feature.desc}
+        image={feature.image}
+        id={String(index + 1)}
+      />
+    ))
+  }
+  <p class="macos-version">
+    We have even more to come, see{" "}
+    <span>
+      <a href="/roadmap"> roadmap </a>
+    </span>
+  </p>
+
+  <div class="social_wrap">
+    {
+      socials.map((social, index) => (
+        <SocialCard
+          key={index}
+          icon={social.icon}
+          title={social.title}
+          desc={social.desc}
+          href={social.href}
+          button={social.button}
+          target="_blank"
+        />
+      ))
+    }
+  </div>
+
+  <Footer />
+</Layout>
+
+<style>
+  .ctalogo {
+    width: 124px;
+    height: 124px;
+  }
+
+  .mythic-gradient-text {
+    display: inline;
+    --bg-size: 400%;
+    font-size: 60px;
+    background: linear-gradient(
+        90deg,
+        var(--color-one),
+        var(--color-two),
+        var(--color-one)
+      )
+      0 0 / var(--bg-size) 100%;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    animation: move-bg 40s infinite linear;
+    margin-bottom: 0;
+  }
+
+  .CTA-Screenshot {
+    opacity: 0;
+    animation: pop-in 1s ease-in-out forwards;
+    animation-delay: 0.1s;
+  }
+
+  @keyframes pop-in {
+    0% {
+      transform: translateY(20px);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @media only screen and (max-width: 903px) {
+    .ctalogo {
+      margin-top: 20px;
+      width: 64px;
+      height: 64px;
+    }
+
+    .mythic-gradient-text {
+      font-size: 36px;
+    }
+  }
+</style>

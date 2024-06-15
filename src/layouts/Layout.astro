@@ -1,0 +1,396 @@
+---
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+import meta from "../../astro-seo.config";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content={meta.robots} />
+    <meta name="viewport" content={meta.viewport} />
+    <link rel="canonical" href={meta.canonical} />
+    <meta name="theme-color" content={meta.themeColor} />
+    <meta name="description" content={meta.description} />
+    <meta property="og:title" content={meta.og.title} />
+    <meta property="og:description" content={meta.og.description} />
+    <meta property="og:url" content={meta.og.url} />
+    <meta property="og:type" content={meta.og.type} />
+    <meta property="og:site_name" content={meta.og.site_name} />
+    <meta property="og:image" content={meta.og.image} />
+    <meta property="og:locale" content={meta.og.locale} />
+    <meta name="twitter:card" content={meta.twitter.card} />
+    <meta name="twitter:title" content={meta.twitter.title} />
+    <meta name="twitter:description" content={meta.twitter.description} />
+    <meta name="twitter:site" content={meta.twitter.site} />
+    <meta name="twitter:image" content={meta.twitter.image} />
+    <meta name="author" content={meta.author} />
+    <meta name="keywords" content={meta.keywords} />
+    <meta name="referrer" content={meta.referrer} />
+    <meta
+      http-equiv="content-language"
+      content={meta.httpEquiv["content-language"]}
+    />
+    <meta
+      http-equiv="X-UA-Compatible"
+      content={meta.httpEquiv["X-UA-Compatible"]}
+    />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{title}</title>
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
+<style is:global>
+  @import url("https://fonts.cdnfonts.com/css/sf-pro-display");
+  @import url("https://fonts.cdnfonts.com/css/sf-ui-text-2");
+  @import url("https://fonts.cdnfonts.com/css/helvetica-neue-55");
+
+  :root {
+    --pro-display: "SF Pro Display", "Helvetica Neue", Helvetica, Arial,
+      sans-serif;
+    --pro-text: "SF UI Text", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+    --primary-color: #ffffff;
+    --secondary-color: #1d1d1f;
+    --secondary-text: #86868b;
+    --button-color: #0071e3;
+    --button-hover-color: #357bd3;
+    --a-color: #222222;
+    --a-hover-color: #357bd3;
+    --navbar-color: rgba(255, 255, 255, 0.9);
+    --stroke: #dbdbdb;
+    --secondary-nav-color: #f8f8f9;
+
+    --color-one: #9041c9;
+    --color-two: #8911f9;
+  }
+
+  [data-theme="dark"] {
+    --primary-color: #1d1d1f;
+    --secondary-color: #ffffff;
+    --button-color: #0071e3;
+    --button-hover-color: #357bd3;
+    --a-color: #ffffff;
+    --a-hover-color: #0071e3;
+    --navbar-color: rgba(21, 21, 22, 0.9);
+    --stroke: #3e3e3e;
+    --secondary-nav-color: rgba(21, 21, 22);
+
+    --color-one: #ffffff;
+    --color-two: #ffffff;
+  }
+
+  body {
+    background-color: var(--primary-color);
+    margin: 0;
+    padding-top: 52px;
+  }
+
+  a {
+    font-family: var(--pro-text);
+    color: var(--a-color);
+    text-decoration: none;
+    transition: 0.3s;
+  }
+
+  a:hover {
+    color: var(--a-hover-color);
+  }
+
+  .button {
+    cursor: pointer;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    background: var(--button-color);
+    color: rgb(255, 255, 255) !important;
+    font-size: 12px;
+    font-family: var(--pro-text);
+    padding: 4px 11px;
+    border-radius: 12px;
+  }
+
+  .button:hover {
+    background: var(--button-hover-color);
+  }
+
+  .button-md {
+    cursor: pointer;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    background: var(--button-color);
+    color: rgb(255, 255, 255) !important;
+    font-size: 16px;
+    font-family: var(--pro-text);
+    padding: 8px 16px;
+    border-radius: 18px;
+  }
+
+  .button-md:hover {
+    background: var(--button-hover-color);
+  }
+
+  body {
+    max-width: 920px;
+    margin: 50px auto 0;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .faq_layout {
+    display: flex;
+    width: 100%;
+    text-align: left !important;
+  }
+
+  h1 {
+    font-family: var(--pro-display);
+    color: var(--secondary-color);
+    font-size: 40px;
+  }
+
+  h2 {
+    font-family: var(--pro-display);
+    color: var(--secondary-color);
+  }
+
+  p {
+    font-family: var(--pro-text);
+    color: var(--secondary-text);
+    font-size: 21px;
+  }
+
+  .social_wrap {
+    text-align: left;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: top;
+    justify-content: center;
+    max-width: 920px;
+    margin: 50px auto 0;
+    gap: 40px 20px;
+  }
+
+  .card {
+    padding: 0px 10px 0px 10px;
+    display: flex;
+    flex-direction: column;
+    transition: 0.3s;
+    max-width: 428px;
+  }
+
+  .card h2 {
+    margin-bottom: 0;
+  }
+
+  .card .button-md {
+    width: fit-content;
+  }
+
+  .macos-version {
+    font-family: var(--pro-text);
+    color: var(--secondary-text);
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+
+  @keyframes move-bg {
+    0% {
+      background-position: 0 0;
+    }
+
+    25% {
+      background-position: 100% 0;
+    }
+
+    50% {
+      background-position: 100% 100%;
+    }
+
+    75% {
+      background-position: 0 100%;
+    }
+
+    100% {
+      background-position: 0 0;
+    }
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    transition: 0.3s;
+  }
+
+  img:hover {
+    transform: scale(1.05);
+  }
+
+  .footer {
+    margin-top: 20px;
+    width: 100%;
+    font-family: var(--pro-text);
+    background-color: var(--primary-color);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    color: var(--secondary-text);
+    border-top: 1px solid var(--stroke);
+  }
+
+  .theme-switcher {
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--stroke);
+    border-radius: 24px;
+    transition: 0.3s;
+  }
+
+  .theme-option {
+    border: none;
+    background-color: transparent;
+    color: var(--secondary-text);
+    cursor: pointer;
+    padding: 5px;
+    font-size: 14px;
+    font-family: var(--pro-text);
+    transition: 0.3s;
+  }
+
+  .theme-option.active {
+    color: #fff !important;
+    font-weight: bold;
+    background-color: var(--button-color);
+    border-radius: 100px;
+  }
+
+  .copyright {
+    max-width: 70%;
+    font-size: 12px;
+    color: var(--secondary-text);
+    margin-left: 10px;
+  }
+
+  input {
+    width: 100%;
+    font-family: var(--pro-text);
+    color: var(--secondary-text);
+    font-size: 14px;
+    padding: 10px;
+    border: 1px solid var(--stroke);
+    border-radius: 8px;
+    outline: none;
+    transition: 0.3s;
+    background-color: var(--primary-color);
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: var(--pro-text);
+    color: var(--pro-text);
+  }
+
+  th,
+  td {
+    color: var(--a-color);
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid var(--stroke);
+  }
+
+  th {
+    font-weight: bold;
+  }
+
+  hr {
+    margin: 10px 0px;
+    width: 100%;
+    border: 1px solid var(--stroke);
+  }
+
+  @media only screen and (max-width: 903px) {
+    table {
+      font-size: 14px;
+    }
+
+    th,
+    td {
+      padding: 6px;
+    }
+
+    .button {
+      font-size: 12px;
+      min-width: 20px;
+      padding: 3px 10px;
+      border-radius: 10px;
+    }
+
+    body {
+      max-width: 550px;
+      margin-top: 32px;
+      padding-top: 52px;
+    }
+
+    h1 {
+      font-size: 48px;
+    }
+
+    p {
+      font-size: 20px;
+    }
+
+    .macos-version {
+      font-size: 12px;
+    }
+
+    img {
+      width: 768px;
+    }
+  }
+
+  @media only screen and (max-width: 480px) {
+    .button {
+      font-size: 11px !important;
+      min-width: 18px;
+      padding: 2px 6px;
+      border-radius: 8px;
+    }
+
+    body {
+      max-width: 300px;
+      margin-top: 16px;
+      padding-top: 32px;
+    }
+
+    h1 {
+      font-size: 32px;
+    }
+
+    p {
+      font-size: 16px;
+    }
+
+    .macos-version {
+      font-size: 10px;
+    }
+
+    img {
+      width: 480px;
+    }
+  }
+</style>

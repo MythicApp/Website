@@ -1,0 +1,29 @@
+---
+const { question, answer, id } = Astro.props;
+---
+
+<details>
+  <summary id={id}>{question}</summary>
+  <Fragment set:html={answer} />
+</details>
+
+<style>
+  summary {
+    width: 100%;
+    text-align: left;
+    font-family: var(--pro-display);
+    color: var(--a-color);
+    font-size: 22px;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 10px;
+  }
+
+  details {
+    width: 100%;
+    text-align: left;
+    font-family: var(--pro-text);
+    color: var(--secondary-text);
+    font-size: 20px;
+  }
+</style>

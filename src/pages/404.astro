@@ -1,0 +1,22 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/navigation/Navbar.astro";
+---
+
+<Layout title="404">
+  <Navbar />
+
+  <h1 class="h1-faq">Page Not Found</h1>
+  <a class="button-md button-md-404" href="javascript:window.history.back();">Go back</a>
+</Layout>
+
+<style>
+  .h1-404 {
+    text-align: left;
+    width: 100%;
+  }
+
+  .button-md-404 {
+    align-items: left;
+  }
+</style>
