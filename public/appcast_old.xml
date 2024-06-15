@@ -1,0 +1,26 @@
+<?xml version="1.0" standalone="yes"?>
+<rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" version="2.0">
+    <channel>
+        <title>Mythic</title>
+        <!-- There isn't really much point in having these here, since they're pointing to appcastify. -->
+        <item>
+            <title>Hermit Purple (Patch #1)</title>
+            <pubDate>Mon, 20 May 2024 22:03:54 +0800</pubDate>
+            <sparkle:version>2630</sparkle:version>
+            <sparkle:shortVersionString>0.1.1-alpha</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <enclosure url="https://github.com/MythicApp/Mythic/releases/download/v0.1.1-alpha/Mythic.zip" length="15642249" type="application/octet-stream"/>
+            <sparkle:deltas>
+                <enclosure url="https://cast.appcastify.com/blackxfiied/Mythic2630-2621.delta" sparkle:deltaFrom="2621" length="307382" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="864768" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,en" sparkle:edSignature="MoePtVLFmZe92vwal8398hfpH3iSnSsBfMAkeJ++KsO00x2Ut3S0F/xd6GZWb0X0aTFvHsJ2PcKMGOIe06JWAw=="/>
+            </sparkle:deltas>
+        </item>
+        <item>
+            <title>Hermit Purple</title>
+            <pubDate>Sun, 19 May 2024 23:43:45 +0800</pubDate>
+            <sparkle:version>2621</sparkle:version>
+            <sparkle:shortVersionString>0.1.0-alpha</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <enclosure url="https://github.com/MythicApp/Mythic/releases/download/0.1.0-alpha/Mythic.zip" length="15631137" type="application/octet-stream" sparkle:edSignature="3vJMV4MCe8llHJwMBYqkE/PNvc+kpexL7rImnhwOB2u6tSGHD48GZRbRrEsOzNxhPDHvEvVTsr0ekWKhBMapCw=="/>
+        </item>
+    </channel>
+</rss>
