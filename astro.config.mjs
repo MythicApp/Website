@@ -16,7 +16,7 @@ export default defineConfig({
         '/roadmap': 'https://github.com/orgs/MythicApp/projects/2/views/2',
         '/discord': 'https://discord.gg/58NZ7fFqPy',
         '/github' : 'https://github.com/mythicapp',
-        // '/docs' : 'https://docs.getmythic.app'
+        '/docs' : 'https://docs.getmythic.app'
     },
     integrations: [icon()]
 });

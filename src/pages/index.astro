@@ -4,7 +4,7 @@ import Navbar from "../components/navigation/Navbar.astro";
 
 import { Image } from "astro:assets";
 import CTALogo from "../images/logo.png";
-import CTAImage from "../images/app.png";
+import CTAImage from "../images/mythic-screenshot.png";
 
 import FeatureSection from "../components/sections/FeatureSection.astro";
 
@@ -18,33 +18,36 @@ import Footer from "../components/navigation/Footer.astro";
 
 const features = [
   {
-    title: "Multiple launchers, one place",
-    desc: "Install, set up, and launch all your games from an external launcher, from Epic, or by yourself.",
-    image: AccountsScreenshot,
-  },
-  {
     title: "Import your own titles",
     desc: "Epic not enough? Import your own macOS or Windows® titles directly into Mythic, and the rest is history.",
     image: ImportScreenshot,
+    color: "#2294b1"
+  },
+  {
+    title: "Multiple launchers, one place",
+    desc: "Install, set up, and launch all your games from an external launcher, from Epic, or by yourself.",
+    image: AccountsScreenshot,
+    color: "#3d44c3"
   },
   {
     title: "Virtualized your way",
     desc: "Create multiple environments of Windows® directly within Mythic, and keep all your games isolated safely from one another.",
     image: BottlesSCreenshot,
+    color: "#e241da"
   },
 ];
 
 const socials = [
   {
     icon: "github",
-    title: "Join the community",
+    title: "You can help shape Mythic",
     desc: "Contribute to Mythic through pull requests and issues on GitHub.",
     href: "/github",
     button: "To GitHub",
   },
   {
     icon: "discord",
-    title: "You can help shape Mythic",
+    title: "Join the community",
     desc: "Join our Discord community for updates and discussions.",
     href: "/discord",
     button: "Join the Discord",
@@ -85,6 +88,7 @@ const socials = [
         desc={feature.desc}
         image={feature.image}
         id={String(index + 1)}
+        color={feature.color}
       />
     ))
   }

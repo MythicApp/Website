@@ -8,7 +8,7 @@ import { Icon } from 'astro-icon/components'
     <a href="/docs">Docs</a>
     <a href="/roadmap" target="_blank">Roadmap</a>
     <a href="/faq">FAQ</a>
-    <a aria-label="discord" href="/discord"><Icon size={21} name="ic:baseline-discord" /></a>
+    <!-- <a aria-label="discord" href="/discord"><Icon size={21} name="ic:baseline-discord" /></a> -->
     <a class="button" href="/download"> Download </a>
   </div>
 </nav>
@@ -23,14 +23,17 @@ import { Icon } from 'astro-icon/components'
     align-items: center;
     position: fixed;
     top: 0;
-    background-color: var(--navbar-color);
-    backdrop-filter: blur(4px);
-    border-bottom: 1px solid var(--stroke);
+    /* background-color: var(--navbar-color); */
+    backdrop-filter: saturate(180%) blur(20px);
+  }
+
+  nav a {
+    color: var(--text-color);
   }
 
   .logo {
     font-family: var(--pro-display);
-    font-weight: 500;
+    font-weight: 600;
     font-size: 21px;
     color: var(--secondary-color);
     padding-left: 100px;

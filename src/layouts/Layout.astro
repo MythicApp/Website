@@ -57,16 +57,17 @@ import meta from "../../astro-seo.config";
       sans-serif;
     --pro-text: "SF UI Text", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
-    --primary-color: #ffffff;
+    --primary-color: #f5f5f7;
     --secondary-color: #1d1d1f;
-    --secondary-text: #86868b;
+    --secondary-text: #1d1d1f;
+    --tertiary-color: #6e6e73;
     --button-color: #0071e3;
     --button-hover-color: #357bd3;
     --a-color: #222222;
     --a-hover-color: #357bd3;
-    --navbar-color: rgba(255, 255, 255, 0.9);
+    --navbar-color: rgba(251,251,253,0.8);
     --stroke: #dbdbdb;
-    --secondary-nav-color: #f8f8f9;
+    --secondary-nav-color: #ffffff;
 
     --color-one: #9041c9;
     --color-two: #8911f9;
@@ -75,6 +76,7 @@ import meta from "../../astro-seo.config";
   [data-theme="dark"] {
     --primary-color: #1d1d1f;
     --secondary-color: #ffffff;
+    --tertiary-color: #6e6e73;
     --button-color: #0071e3;
     --button-hover-color: #357bd3;
     --a-color: #ffffff;
@@ -201,7 +203,7 @@ import meta from "../../astro-seo.config";
 
   .macos-version {
     font-family: var(--pro-text);
-    color: var(--secondary-text);
+    color: var(--tertiary-color);
     font-size: 14px;
     margin-bottom: 20px;
   }
@@ -239,13 +241,13 @@ import meta from "../../astro-seo.config";
   }
 
   .footer {
-    margin-top: 20px;
+    margin-top: 50px;
     width: 100%;
     font-family: var(--pro-text);
     background-color: var(--primary-color);
     padding: 20px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     font-size: 14px;
     color: var(--secondary-text);

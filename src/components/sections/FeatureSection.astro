@@ -1,10 +1,10 @@
 ---
-const { title, desc, image } = Astro.props;
+const { title, desc, image, color } = Astro.props;
 import { Image } from "astro:assets";
 ---
 
 <div class="feature">
-  <h1 class="h1-faq">{title}</h1>
+  <h1 class="h1-faq" style=`color: ${color};`>{title}</h1>
   <p>{desc}</p>
   <Image src={image} loading="lazy" alt="Mythic logo" />
 </div>
