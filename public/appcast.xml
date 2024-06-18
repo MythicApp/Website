@@ -3,6 +3,17 @@
     <channel>
         <title>Mythic</title>
         <item>
+            <title>0.2.1-alpha</title>
+            <pubDate>Wed, 19 Jun 2024 00:57:18 +0800</pubDate>
+            <sparkle:version>2780</sparkle:version>
+            <sparkle:shortVersionString>0.2.1-alpha</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <enclosure url="https://github.com/MythicApp/Mythic/releases/download/v0.2.1-alpha/Mythic.zip" length="17110265" type="application/octet-stream" sparkle:edSignature="WNS0/R2dSCqAiPaQdVEo4mpfAv5NfeQR+0wEB97axTnN/3pOEW/4Z3R+hXkP7F0Uy/DDaGJ9tLjWJ6Ench3gAQ=="/>
+            <sparkle:deltas>
+                <enclosure url="https://getmythic.app/Mythic2780-2754.delta" sparkle:deltaFrom="2754" length="921890" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="864768" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,en" sparkle:edSignature="bASeOwn78bJ9aGKaZUZzA8Ag4BAnMD2nCB80jjI/lQslV1ovcAuDXy0BxXD+dihnanRnY/Gv5KmDe1MlhJusCQ=="/>
+            </sparkle:deltas>
+        </item>
+        <item>
             <title>0.2.0-alpha</title>
             <pubDate>Fri, 14 Jun 2024 00:28:40 +0800</pubDate>
             <sparkle:version>2754</sparkle:version>
