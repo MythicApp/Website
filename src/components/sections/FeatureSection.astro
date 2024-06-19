@@ -6,7 +6,7 @@ import { Image } from "astro:assets";
 <div class="feature">
   <h1 class="h1-faq" style=`color: ${color};`>{title}</h1>
   <p style="max-width: 65%;">{desc}</p>
-  <Image src={image} loading="lazy" alt="Mythic logo" />
+  <Image src={image} loading="lazy" alt="Mythic logo" class="card-image" />
 </div>
 
 <style>
@@ -17,5 +17,10 @@ import { Image } from "astro:assets";
     padding: 10px 20px;
     background-color: var(--secondary-nav-color);
     text-align: left;
+  }
+  
+  .card-image {
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
 </style>
