@@ -3,6 +3,18 @@
     <channel>
         <title>Mythic</title>
         <item>
+            <title>0.3.0</title>
+            <pubDate>Fri, 28 Jun 2024 13:23:49 +0800</pubDate>
+            <sparkle:version>2789</sparkle:version>
+            <sparkle:shortVersionString>0.3.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <enclosure url="https://github.com/MythicApp/Mythic/releases/download/v0.3.0/Mythic.zip" length="17215508" type="application/octet-stream" sparkle:edSignature="6a1RKMvPfM1FMkesNCPDDArKmUTWGUmWsUJvVc2oSba8O0+z7hVH53q1SizqBw+c67N2ycOkCrpZBVDz8KliCQ=="/>
+            <sparkle:deltas>
+                <enclosure url="https://getmythic.app/Mythic2789-2780.delta" sparkle:deltaFrom="2780" length="509258" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="864768" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,en" sparkle:edSignature="Hrfzu+bsHhRWpf7TUdzEsBzJ7bn4UJjdUmnZ0r0KS/4II29OkInjScNT6kapP2xKmaGq9+HZZr1Z4oFeWYmXDA=="/>
+                <enclosure url="https://getmythic.app/Mythic2789-2754.delta" sparkle:deltaFrom="2754" length="1094974" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="864768" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,en" sparkle:edSignature="GV0VWNgHcR4dAAAyxUBa0agzYWUXdvFRhTKlAnxppgRd53ju6k/BXqt+OIGA681bhs8eAZ1Sumhj35JIGbjcCg=="/>
+            </sparkle:deltas>
+        </item>
+        <item>
             <title>0.2.1-alpha</title>
             <pubDate>Wed, 19 Jun 2024 00:57:18 +0800</pubDate>
             <sparkle:version>2780</sparkle:version>
