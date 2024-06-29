@@ -4,8 +4,8 @@ import { Image } from "astro:assets";
 ---
 
 <div class="feature">
-  <h1 style=`color: ${color};`>{title}</h1>
-  <p style="max-width: 65%;">{desc}</p>
+  <h3 style=`color: ${color};`>{title}</h3>
+  <p>{desc}</p>
   <Image src={image} loading="lazy" alt="Mythic logo" />
 </div>
 
@@ -14,12 +14,20 @@ import { Image } from "astro:assets";
     margin-top: 20px;
     margin-bottom: 20px;
     border-radius: 16px;
-    padding: 10px 20px;
+    padding: 20px;
     background-color: var(--secondary-nav-color);
     text-align: left;
+    align-items: center;
+  }
+
+  .feature p {
+    max-width: 50%;
   }
 
   .feature img {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    max-height: 500px;
   }
 </style>

@@ -82,40 +82,42 @@ const socials = [
     inferSize;
   />
 
-  {
-    features.map((feature, index) => (
-      <FeatureSection
-        title={feature.title}
-        desc={feature.desc}
-        image={feature.image}
-        id={String(index + 1)}
-        color={feature.color}
-      />
-    ))
-  }
-  <sub>
-    We have even more to come, see{" "}
-    <span>
-      <a href="https://github.com/orgs/MythicApp/projects/2/views/2">
-        roadmap
-      </a>
-    </span>
-  </sub>
-
-  <div class="social_wrap">
+  <div class="cta-after">
     {
-      socials.map((social, index) => (
-        <SocialCard
-          key={index}
-          icon={social.icon}
-          title={social.title}
-          desc={social.desc}
-          href={social.href}
-          button={social.button}
-          target="_blank"
+      features.map((feature, index) => (
+        <FeatureSection
+          title={feature.title}
+          desc={feature.desc}
+          image={feature.image}
+          id={String(index + 1)}
+          color={feature.color}
         />
       ))
     }
+    <sub>
+      We have even more to come, see{" "}
+      <span>
+        <a href="https://github.com/orgs/MythicApp/projects/2/views/2">
+          roadmap
+        </a>
+      </span>
+    </sub>
+
+    <div class="social_wrap">
+      {
+        socials.map((social, index) => (
+          <SocialCard
+            key={index}
+            icon={social.icon}
+            title={social.title}
+            desc={social.desc}
+            href={social.href}
+            button={social.button}
+            target="_blank"
+          />
+        ))
+      }
+    </div>
   </div>
 
   <Footer />
