@@ -35,3 +35,21 @@ const { icon, title, desc, button, href, target } = Astro.props;
     )
   }
 </div>
+
+<style>
+  .card {
+    padding: 0px 10px 0px 10px;
+    display: flex;
+    flex-direction: column;
+    transition: 0.3s;
+    max-width: 428px;
+  }
+
+  .card h2 {
+    margin-bottom: 0;
+  }
+
+  .card .button-md {
+    width: fit-content;
+  }
+</style>

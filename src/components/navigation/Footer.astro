@@ -30,3 +30,52 @@
 </footer>
 
 <!-- <script src="/theme.js" defer></script> -->
+
+<style>
+  .footer {
+    margin-top: 50px;
+    width: 100%;
+    font-family: var(--pro-text);
+    background-color: var(--primary-color);
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    color: var(--secondary-text);
+    border-top: 1px solid var(--stroke);
+  }
+
+  .theme-switcher {
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--stroke);
+    border-radius: 24px;
+    transition: 0.3s;
+  }
+
+  .theme-option {
+    border: none;
+    background-color: transparent;
+    color: var(--secondary-text);
+    cursor: pointer;
+    padding: 5px;
+    font-size: 14px;
+    font-family: var(--pro-text);
+    transition: 0.3s;
+  }
+
+  .theme-option.active {
+    color: #fff !important;
+    font-weight: bold;
+    background-color: var(--button-color);
+    border-radius: 100px;
+  }
+
+  .copyright {
+    max-width: 70%;
+    font-size: 12px;
+    color: var(--secondary-text);
+    margin-left: 10px;
+  }
+</style>

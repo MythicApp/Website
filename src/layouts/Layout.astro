@@ -5,6 +5,8 @@ interface Props {
 
 const { title } = Astro.props;
 import meta from "../../astro-seo.config";
+
+import Navbar from "../components/navigation/Navbar.astro";
 ---
 
 <!doctype html>
@@ -44,6 +46,7 @@ import meta from "../../astro-seo.config";
     <title>{title}</title>
   </head>
   <body>
+    <Navbar />
     <slot />
   </body>
 </html>
@@ -59,13 +62,13 @@ import meta from "../../astro-seo.config";
 
     --primary-color: #f5f5f7;
     --secondary-color: #1d1d1f;
-    --secondary-text: #5D5D5F;
+    --secondary-text: #5d5d5f;
     --tertiary-color: #6e6e73;
     --button-color: #0071e3;
     --button-hover-color: #357bd3;
     --a-color: #222222;
     --a-hover-color: #357bd3;
-    --navbar-color: rgba(251,251,253,0.2);
+    --navbar-color: rgba(251, 251, 253, 0.2);
     --stroke: #dbdbdb;
     --secondary-nav-color: #ffffff;
 
@@ -95,6 +98,16 @@ import meta from "../../astro-seo.config";
     padding-top: 52px;
   }
 
+  body {
+    max-width: 920px;
+    margin: 50px auto 0;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
   a {
     font-family: var(--pro-text);
     color: var(--a-color);
@@ -106,6 +119,7 @@ import meta from "../../astro-seo.config";
     color: var(--a-hover-color);
   }
 
+  button,
   .button {
     cursor: pointer;
     display: flex;
@@ -119,6 +133,7 @@ import meta from "../../astro-seo.config";
     border-radius: 12px;
   }
 
+  button,
   .button:hover {
     background: var(--button-hover-color);
   }
@@ -140,179 +155,31 @@ import meta from "../../astro-seo.config";
     background: var(--button-hover-color);
   }
 
-  body {
-    max-width: 920px;
-    margin: 50px auto 0;
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
-
-  .faq_layout {
-    display: flex;
-    width: 100%;
-    text-align: left !important;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--pro-display);
+    color: var(--secondary-color);
   }
 
   h1 {
-    font-family: var(--pro-display);
-    color: var(--secondary-color);
     font-size: 40px;
   }
 
-  h2 {
-    font-family: var(--pro-display);
-    color: var(--secondary-color);
-  }
-
-  p {
+  p,
+  text {
     font-family: var(--pro-text);
     color: var(--secondary-text);
     font-size: 21px;
-  }
-
-  .social_wrap {
-    text-align: left;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: top;
-    justify-content: center;
-    max-width: 920px;
-    margin: 50px auto 0;
-    gap: 40px 20px;
-  }
-
-  .card {
-    padding: 0px 10px 0px 10px;
-    display: flex;
-    flex-direction: column;
-    transition: 0.3s;
-    max-width: 428px;
-  }
-
-  .card h2 {
-    margin-bottom: 0;
-  }
-
-  .card .button-md {
-    width: fit-content;
-  }
-
-  .macos-version {
-    font-family: var(--pro-text);
-    color: var(--tertiary-color);
-    font-size: 14px;
-    margin-bottom: 20px;
-  }
-
-  @keyframes move-bg {
-    0% {
-      background-position: 0 0;
-    }
-
-    25% {
-      background-position: 100% 0;
-    }
-
-    50% {
-      background-position: 100% 100%;
-    }
-
-    75% {
-      background-position: 0 100%;
-    }
-
-    100% {
-      background-position: 0 0;
-    }
   }
 
   img {
     max-width: 100%;
     height: auto;
     transition: 0.3s;
-  }
-
-  .footer {
-    margin-top: 50px;
-    width: 100%;
-    font-family: var(--pro-text);
-    background-color: var(--primary-color);
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 14px;
-    color: var(--secondary-text);
-    border-top: 1px solid var(--stroke);
-  }
-
-  .theme-switcher {
-    display: flex;
-    align-items: center;
-    border: 1px solid var(--stroke);
-    border-radius: 24px;
-    transition: 0.3s;
-  }
-
-  .theme-option {
-    border: none;
-    background-color: transparent;
-    color: var(--secondary-text);
-    cursor: pointer;
-    padding: 5px;
-    font-size: 14px;
-    font-family: var(--pro-text);
-    transition: 0.3s;
-  }
-
-  .theme-option.active {
-    color: #fff !important;
-    font-weight: bold;
-    background-color: var(--button-color);
-    border-radius: 100px;
-  }
-
-  .copyright {
-    max-width: 70%;
-    font-size: 12px;
-    color: var(--secondary-text);
-    margin-left: 10px;
-  }
-
-  input {
-    width: 100%;
-    font-family: var(--pro-text);
-    color: var(--secondary-text);
-    font-size: 14px;
-    padding: 10px;
-    border: 1px solid var(--stroke);
-    border-radius: 8px;
-    outline: none;
-    transition: 0.3s;
-    background-color: var(--primary-color);
-  }
-
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    font-family: var(--pro-text);
-    color: var(--pro-text);
-  }
-
-  th,
-  td {
-    color: var(--a-color);
-    padding: 8px;
-    text-align: left;
-    border-bottom: 1px solid var(--stroke);
-  }
-
-  th {
-    font-weight: bold;
   }
 
   hr {
@@ -322,15 +189,7 @@ import meta from "../../astro-seo.config";
   }
 
   @media only screen and (max-width: 903px) {
-    table {
-      font-size: 14px;
-    }
-
-    th,
-    td {
-      padding: 6px;
-    }
-
+    button,
     .button {
       font-size: 12px;
       min-width: 20px;
@@ -353,16 +212,13 @@ import meta from "../../astro-seo.config";
       max-width: 460px !important;
     }
 
-    .macos-version {
-      font-size: 12px;
-    }
-
     img {
       width: 768px;
     }
   }
 
   @media only screen and (max-width: 480px) {
+    button,
     .button {
       font-size: 11px !important;
       min-width: 18px;
@@ -382,10 +238,6 @@ import meta from "../../astro-seo.config";
 
     p {
       font-size: 16px;
-    }
-
-    .macos-version {
-      font-size: 10px;
     }
 
     img {

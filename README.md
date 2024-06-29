@@ -5,11 +5,12 @@
       style="width: 20%; height: 20%;">
   </a>
 
-  Website
-  <br>
-  <sub><sub><sub>Part of <a href="https://getmythic.app">Mythic.</a></sub></sub></sub>
+Website
+<br>
+<sub><sub><sub>Part of <a href="https://getmythic.app">Mythic.</a></sub></sub></sub>
 
-  [![Discord](https://img.shields.io/discord/1154998702650425397?color=5865F2)](https://discord.com/invite/58NZ7fFqPy)
+[![Discord](https://img.shields.io/discord/1154998702650425397?color=5865F2)](https://discord.com/invite/58NZ7fFqPy)
+
 </h1>
 
 Mythic's open-source website backend.

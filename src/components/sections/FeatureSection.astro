@@ -4,9 +4,9 @@ import { Image } from "astro:assets";
 ---
 
 <div class="feature">
-  <h1 class="h1-faq" style=`color: ${color};`>{title}</h1>
+  <h1 style=`color: ${color};`>{title}</h1>
   <p style="max-width: 65%;">{desc}</p>
-  <Image src={image} loading="lazy" alt="Mythic logo" class="card-image" />
+  <Image src={image} loading="lazy" alt="Mythic logo" />
 </div>
 
 <style>
@@ -18,9 +18,8 @@ import { Image } from "astro:assets";
     background-color: var(--secondary-nav-color);
     text-align: left;
   }
-  
-  .card-image {
-    border-radius: 12px;
+
+  .feature img {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
 </style>
