@@ -1,5 +1,5 @@
 let metaTitle = "Mythic";
-let metaDescription = "An open-source Epic Games Launcher alternative and normal game launcher for macOS written in Swift. We started this project to create a GUI frontend for Legendary and to play Windows games using game porting toolkit by Apple.";
+let metaDescription = "An open-source Epic Games Launcher alternative and game launcher for macOS written in Apple Swift, with the ability to run Windows® games.";
 let metaUrl = "https://getmythic.app";
 let metaImage = "https://getmythic.app/ogimage.png";
 
