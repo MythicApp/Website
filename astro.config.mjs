@@ -8,6 +8,6 @@ export default defineConfig({
     site: 'https://getmythic.app',
     integrations: [icon()],
     redirects: {
-        "/appcast.xml" : "/sparkle/appcast.xml",
+        "/sparkle/appcast.xml" : "/appcast.xml",
     }
 });
