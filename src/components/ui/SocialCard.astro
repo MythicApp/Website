@@ -48,13 +48,13 @@ const { icon, title, desc, button, href, target } = Astro.props;
 
 <style>
   .card {
-    padding: 0px 10px 0px 10px;
     display: flex;
-    flex-direction: column;
-    transition: 0.3s;
-    max-width: 428px;
-  }
-
+    flex-direction: column; /* Stack content vertically */
+    transition: 0.3s; /* Smooth transition for hover effects */
+    flex: 1 1 calc(33.33% - 20px); /* Take up one-third of available space */
+    height: 300px; /* Fixed height for uniformity */
+    width: 100%;
+}
   .card h2 {
     margin-bottom: 0;
   }
@@ -62,4 +62,17 @@ const { icon, title, desc, button, href, target } = Astro.props;
   .card .button-md {
     width: fit-content;
   }
+
+  @media (max-width: 768px) {
+    .card {
+        flex: 1 1 calc(50% - 20px); /* Two cards per row */
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        flex: 1 1 calc(100% - 20px); /* Single card per row */
+    }
+}
+
 </style>
