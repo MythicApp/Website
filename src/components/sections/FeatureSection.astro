@@ -21,14 +21,20 @@ import { Image } from "astro:assets";
     background-color: var(--secondary-nav-color);
     padding: 20px;
     border-radius: 16px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
     margin-bottom: 20px;
+    height: 100%;
   }
 
   .feature-image {
     width: 100%;
     height: auto;
+  }
+
+  .feature-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
   }
 
   .feature-text h3 {

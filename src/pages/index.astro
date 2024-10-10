@@ -7,32 +7,54 @@ import CTAImage from "../images/mythic-screenshot.png";
 
 import FeatureSection from "../components/sections/FeatureSection.astro";
 
-import AccountsScreenshot from "../images/accounts.png";
-import ImportScreenshot from "../images/import.png";
-import BottlesSCreenshot from "../images/bottles.png";
+import FullscreenLibraryScreenshotLight from "../images/app/light/fs_library.png"
+import GameSettingsScreenshotLight from "../images/app/light/gamesettings.png"
+import ImportSheetScreenshotLight from "../images/app/light/importsheet.png"
+import ContainerConfigurationScreenshotLight from "../images/app/light/containerconfiguration.png"
+import AccountManagerScreenshotLight from "../images/app/light/accountmanager.png"
+import SupportViewScreenshotLight from "../images/app/light/supportview.png"
+import MythicXcodeScreenshotLight from "../images/app/light/mythic_xcode.png"
 
 import SocialCard from "../components/ui/SocialCard.astro";
 
 import Footer from "../components/navigation/Footer.astro";
 
 const features = [
-  {
-    title: "Import your own titles",
-    desc: "Epic not enough? Import your own macOS or Windows® titles directly into Mythic, and the rest is history.",
-    image: ImportScreenshot,
+{
+    title: "Your library, your way.",
+    desc: "Easily manage all your games in one place, with a beautiful and customizable library.",
+    image: FullscreenLibraryScreenshotLight,
     color: "#2294b1",
   },
   {
+    title: "Open-source, open season!",
+    desc: "Something isn't as good as it should be? Dig through the source code and help make it better.",
+    image: MythicXcodeScreenshotLight,
+    color: "#e241da",
+  },
+  {
     title: "Multiple launchers, one place",
-    desc: "Install, set up, and launch all your games from an external launcher, from Epic, or by yourself.",
-    image: AccountsScreenshot,
+    desc: "Install, set up, and launch all your games from an external launcher, or by yourself.",
+    image: AccountManagerScreenshotLight,
     color: "#3d44c3",
   },
   {
-    title: "Virtualized your way",
-    desc: "Create multiple environments of Windows® directly within Mythic, and keep all your games isolated safely from one another.",
-    image: BottlesSCreenshot,
+    title: "Game management, without the fuss.",
+    desc: "Need to move your games around? Maybe, edit some settings? Add some flags? Mythic has you covered.",
+    image: GameSettingsScreenshotLight,
+    color: "#2294b1",
+  },
+  {
+    title: "Import your own titles",
+    desc: "Epic not enough? Import your own macOS or Windows® titles directly into Mythic, and the rest is history.",
+    image: ImportSheetScreenshotLight,
     color: "#e241da",
+  },
+  {
+    title: "Virtualization? Child's play.",
+    desc: "Create multiple environments of Windows® directly within Mythic, and keep all your games isolated safely from one another.",
+    image: ContainerConfigurationScreenshotLight,
+    color: "#3d44c3",
   },
 ];
 
@@ -72,7 +94,7 @@ const socials = [
   <h1 class="mythic-gradient-text">
     The best way to play Windows games on Mac.
   </h1>
-  <p style="margin-top: 15px; max-width: 800px;">
+  <p>
     An open-source macOS game launcher to play Windows games through our
     implementation of Apple's Game Porting Toolkit - supporting many launchers.
   </p>
@@ -90,29 +112,86 @@ const socials = [
   />
 
   <div class="cta-after">
-    <h1 class="mythic-gradient-text" style="text-align: left;">
-      Gaming on a Mac has never been this easy
+    <h1
+      class="mythic-gradient-text"
+      style="text-align: left; margin-bottom: 0;"
+    >
+      Friends gaming without you?
     </h1>
-    <p style="margin-top: 15px; text-align: left;">
-      Time to throw all your virtual machines, wine bottles and subscriptions
-      out of the window.
+    <h1 style="text-align: left; margin: 0;">
+      Mythic can fix that.
+    </h1>
+    <p style="text-align: left; margin-top: 0;">
+      Time to throw all your virtual machines and subscriptions out of the
+      window.
     </p>
-    {
-      features.map((feature, index) => (
+    
+    <!-- unfortunately i'm not a webdev and am too lazy to deal with modularity -->
+    <div class="grid-container" style="grid-template-columns: 3fr 1fr;">
+      <div class="large-tile">
         <FeatureSection
-          title={feature.title}
-          desc={feature.desc}
-          image={feature.image}
-          id={String(index + 1)}
-          color={feature.color}
+          title={features[0].title}
+          desc={features[0].desc}
+          image={features[0].image}
+          id="1"
+          color={features[0].color}
         />
-      ))
-    }
+      </div>
+      <div class="small-tile">
+        <FeatureSection
+          title={features[1].title}
+          desc={features[1].desc}
+          image={features[1].image}
+          id="2"
+          color={features[1].color}
+        />
+      </div>
+      <div class="small-tile">
+        <FeatureSection
+          title={features[2].title}
+          desc={features[2].desc}
+          image={features[2].image}
+          id="3"
+          color={features[2].color}
+        />
+      </div>
+    </div>
+
+    <div class="grid-container" style="grid-template-columns: 1fr 3fr;">
+      <div class="large-tile" style="grid-column: 2;">
+        <FeatureSection
+          title={features[3].title}
+          desc={features[3].desc}
+          image={features[3].image}
+          id="3"
+          color={features[3].color}
+        />
+      </div>
+      <div class="small-tile" style="grid-column: 1;">
+        <FeatureSection
+          title={features[4].title}
+          desc={features[4].desc}
+          image={features[4].image}
+          id="4"
+          color={features[4].color}
+        />
+      </div>
+      <div class="small-tile" style="grid-column: 1;">
+        <FeatureSection
+          title={features[5].title}
+          desc={features[5].desc}
+          image={features[5].image}
+          id="5"
+          color={features[5].color}
+        />
+      </div>
+    </div>
+
     <sub>
-      We have even more to come, see{" "}
+      We have even more to come, check out the{" "}
       <span>
         <a href="https://github.com/orgs/MythicApp/projects/2/views/2">
-          roadmap
+          roadmap.
         </a>
       </span>
     </sub>
@@ -138,6 +217,46 @@ const socials = [
 </Layout>
 
 <style>
+  .grid-container {
+    display: grid;
+    gap: 1rem;
+    row-gap: 0;
+    align-items: center;
+    height: 100%;
+  }
+
+  .large-tile {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100%; 
+  }
+
+  .small-tile {
+    grid-column: 2;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  }
+
+  @media only screen and (max-width: 768px) {
+    .grid-container {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+    }
+
+    .large-tile,
+    .small-tile {
+      grid-column: 1;
+      grid-row: auto;
+      height: auto;
+    }
+  }
+  
   .ctalogo {
     width: 124px;
     height: 124px;
@@ -146,7 +265,6 @@ const socials = [
   .mythic-gradient-text {
     display: inline;
     --bg-size: 400%;
-    font-size: 60px;
     background: linear-gradient(
         90deg,
         var(--color-one),
@@ -157,7 +275,7 @@ const socials = [
     color: transparent;
     -webkit-background-clip: text;
     background-clip: text;
-    animation: move-bg 40s infinite linear;
+    animation: move-bg 40s infinite ease-in-out;
     margin-bottom: 0;
   }
 
@@ -225,10 +343,6 @@ const socials = [
       margin-top: 20px;
       width: 64px;
       height: 64px;
-    }
-
-    .mythic-gradient-text {
-      font-size: 36px;
     }
 
     sub {
