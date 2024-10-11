@@ -29,12 +29,23 @@ import { Image } from "astro:assets";
   .feature-image {
     width: 100%;
     height: auto;
+    position: relative;
+    overflow: visible; /* Allow the image to expand beyond its container */
   }
 
   .feature-image img {
     width: 100%;
     height: auto;
     object-fit: cover;
+    transition: transform 0.3s ease;
+    display: block;
+  }
+
+  /* Image hover effect for larger screens */
+  @media (hover: hover) and (min-width: 768px) {
+    .feature-image img:hover {
+      transform: scale(1.1); /* Scale the image without clipping */
+    }
   }
 
   .feature-text h3 {
