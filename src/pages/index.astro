@@ -7,20 +7,20 @@ import CTAImage from "../images/mythic-screenshot.png";
 
 import FeatureSection from "../components/sections/FeatureSection.astro";
 
-import FullscreenLibraryScreenshotLight from "../images/app/light/fs_library.png"
-import GameSettingsScreenshotLight from "../images/app/light/gamesettings.png"
-import ImportSheetScreenshotLight from "../images/app/light/importsheet.png"
-import ContainerConfigurationScreenshotLight from "../images/app/light/containerconfiguration.png"
-import AccountManagerScreenshotLight from "../images/app/light/accountmanager.png"
-import SupportViewScreenshotLight from "../images/app/light/supportview.png"
-import MythicXcodeScreenshotLight from "../images/app/light/mythic_xcode.png"
+import FullscreenLibraryScreenshotLight from "../images/app/light/fs_library.png";
+import GameSettingsScreenshotLight from "../images/app/light/gamesettings.png";
+import ImportSheetScreenshotLight from "../images/app/light/importsheet.png";
+import ContainerConfigurationScreenshotLight from "../images/app/light/containerconfiguration.png";
+import AccountManagerScreenshotLight from "../images/app/light/accountmanager.png";
+import SupportViewScreenshotLight from "../images/app/light/supportview.png";
+import MythicXcodeScreenshotLight from "../images/app/light/mythic_xcode.png";
 
 import SocialCard from "../components/ui/SocialCard.astro";
 
 import Footer from "../components/navigation/Footer.astro";
 
 const features = [
-{
+  {
     title: "Your library, your way.",
     desc: "Easily manage all your games in one place, with a beautiful and customizable library.",
     image: FullscreenLibraryScreenshotLight,
@@ -79,8 +79,22 @@ const socials = [
     desc: "Supercharge Mythic's development and get benefits (soon...)",
     href: "https://ko-fi.com/blackxfiied",
     button: "To Ko-fi",
-  }
+  },
 ];
+let repoDescription = "An open-source macOS game launcher with the ability to play Windows® games \
+                      through a custom implementation of Apple's Game Porting Toolkit — supporting multiple platforms.";
+
+try {
+  const response = await fetch("https://api.github.com/repos/MythicApp/Mythic");
+  if (response.ok) {
+    const data = await response.json();
+    repoDescription = data.description || repoDescription;
+  } else {
+    console.error("Failed to fetch repository details:", response.statusText);
+  }
+} catch (error) {
+  console.error("Error fetching GitHub API:", error);
+}
 ---
 
 <Layout title="Mythic">
@@ -94,10 +108,7 @@ const socials = [
   <h1 class="mythic-gradient-text">
     The best way to play Windows games on Mac.
   </h1>
-  <p>
-    An open-source macOS game launcher to play Windows games through our
-    implementation of Apple's Game Porting Toolkit - supporting many launchers.
-  </p>
+  <p>{repoDescription}</p>
   <br />
   <a class="button-md" href="https://github.com/MythicApp/Mythic/releases">
     Download Alpha
@@ -118,14 +129,12 @@ const socials = [
     >
       Friends gaming without you?
     </h1>
-    <h1 style="text-align: left; margin: 0;">
-      Mythic can fix that.
-    </h1>
+    <h1 style="text-align: left; margin: 0;">Mythic can fix that.</h1>
     <p style="text-align: left; margin-top: 0;">
       Time to throw all your virtual machines and subscriptions out of the
       window.
     </p>
-    
+
     <!-- unfortunately i'm not a webdev and am too lazy to deal with modularity -->
     <div class="grid-container" style="grid-template-columns: 3fr 1fr;">
       <div class="large-tile">
@@ -199,7 +208,8 @@ const socials = [
     </sub>
 
     <sub style="font-style: italic;">
-      (Please note that Mythic is still in its alpha stage of development; expect bugs.)
+      (Please note that Mythic is still in its alpha stage of development;
+      expect bugs.)
     </sub>
 
     <div class="social_wrap">
@@ -237,7 +247,7 @@ const socials = [
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    height: 100%; 
+    height: 100%;
   }
 
   .small-tile {
@@ -261,7 +271,7 @@ const socials = [
       height: auto;
     }
   }
-  
+
   .ctalogo {
     width: 124px;
     height: 124px;
