@@ -245,13 +245,12 @@ const socials = [
 
   @media only screen and (max-width: 768px) {
     .grid-container {
-      grid-template-columns: 1fr;
-      grid-template-rows: auto;
+      display: block;
     }
 
     .large-tile,
     .small-tile {
-      grid-column: 1;
+      grid-column: auto;
       grid-row: auto;
       height: auto;
     }
