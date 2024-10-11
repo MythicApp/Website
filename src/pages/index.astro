@@ -135,6 +135,7 @@ const socials = [
           image={features[0].image}
           id="1"
           color={features[0].color}
+          footnote="Some Windows® games may not be supported for use within Mythic."
         />
       </div>
       <div class="small-tile">
@@ -153,6 +154,7 @@ const socials = [
           image={features[2].image}
           id="3"
           color={features[2].color}
+          footnote="Steam support is still in development."
         />
       </div>
     </div>
@@ -194,6 +196,10 @@ const socials = [
           roadmap.
         </a>
       </span>
+    </sub>
+
+    <sub style="font-style: italic;">
+      (Please note that Mythic is still in its alpha stage of development; expect bugs.)
     </sub>
 
     <div class="social_wrap">
@@ -243,7 +249,7 @@ const socials = [
     height: 100%;
   }
 
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 1024px) {
     .grid-container {
       display: block;
     }

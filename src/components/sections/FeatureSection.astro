@@ -1,5 +1,5 @@
 ---
-const { title, desc, image, color } = Astro.props;
+const { title, desc, image, color, footnote = '' } = Astro.props;
 import { Image } from "astro:assets";
 ---
 
@@ -11,6 +11,7 @@ import { Image } from "astro:assets";
   <div class="feature-image">
     <Image src={image} loading="lazy" alt="Mythic feature" />
   </div>
+    <p style="font-size: 0.8rem; font-style: italic;">{footnote}</p>
 </div>
 
 <style>
