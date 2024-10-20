@@ -1,0 +1,105 @@
+<div id="modal" class="modal">
+    <div class="modal-content">
+      <!-- Circular Close Button -->
+      <button id="closeModalButton" class="close-btn">✕</button>
+  
+      <h2>holy fortnite</h2>
+      <p>battlew pass!!</p>
+    </div>
+  </div>
+  
+  <style>
+    /* Modal Overlay */
+    .modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5); /* Dark background */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      pointer-events: none; /* Prevent interaction when hidden */
+      transition: opacity 0.4s ease, backdrop-filter 0.4s ease; /* Smooth fade in/out */
+      z-index: 1000; /* Ensure modal is on top */
+    }
+  
+    /* Modal when shown (fade-in and pointer events enabled) */
+    .modal.show {
+      opacity: 1;
+      pointer-events: auto;
+    }
+  
+    /* Modal content (adaptive size, rounded corners, padding) */
+    .modal-content {
+      background-color: white;
+      padding: 20px;
+      border-radius: 16px; /* Rounded corners */
+      max-width: 90%; /* Responsive width */
+      max-height: 90%; /* Avoid content overflow */
+      box-sizing: border-box; /* Ensure padding is considered in width/height */
+      overflow-y: auto; /* Scroll if content overflows */
+      transform: translateY(-50px); /* Slide in */
+      transition: transform 0.4s ease, opacity 0.4s ease; /* Slide and fade */
+      opacity: 0;
+    }
+  
+    /* Show modal content animation */
+    .modal.show .modal-content {
+      transform: translateY(0); /* Slide into place */
+      opacity: 1; /* Fade in */
+    }
+  
+    /* Close button styling */
+    .close-btn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background-color: #f0f0f0; /* Off-white background */
+      color: black; /* Black X */
+      border: none;
+      border-radius: 50%; /* Circle */
+      width: 30px;
+      height: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 16px;
+    }
+  
+    /* Disable scrolling on page when modal is open */
+    body.modal-open {
+      overflow: hidden;
+    }
+  </style>
+  
+  <script>
+    // Open modal function
+    window.openModal = function() {
+      const modal = document.getElementById('modal');
+      modal.classList.add('show');
+      
+      // Disable scrolling on the page
+      document.body.classList.add('modal-open');
+    };
+  
+    // Close modal function
+    window.closeModal = function() {
+      const modal = document.getElementById('modal');
+      modal.classList.remove('show');
+  
+      // Re-enable scrolling on the page after the animation ends
+      setTimeout(() => {
+        document.body.classList.remove('modal-open');
+      }, 400); // Match the animation duration (0.4s)
+    };
+  
+    // Event listener for the close button
+    document.getElementById('closeModalButton').addEventListener('click', function() {
+      window.closeModal();
+    });
+  </script>
+  

@@ -1,3 +1,7 @@
+---
+import Modal from '../Modal.astro';
+---
+
 <nav>
   <a href="/"><h1 class="logo">Mythic</h1></a>
   <div class="right-items">
@@ -11,12 +15,23 @@
       target="_blank">Donate</a
     >
     <a href="/faq">FAQ</a>
-    <!-- <a aria-label="discord" href="https://discord.gg/58NZ7fFqPy"><Icon size={21} name="ic:baseline-discord" /></a> -->
-    <a class="button" href="https://github.com/MythicApp/Mythic/releases">
+    <a class="button" id="openModalLink">
       Download
     </a>
   </div>
 </nav>
+
+<!-- Modal Component -->
+<Modal />
+
+<script>
+  // Trigger the modal when the download button is clicked
+  document.getElementById('openModalLink').addEventListener('click', function(event) {
+    event.preventDefault(); // Prevent default link action
+    window.openModal(); // Open the modal
+  });
+</script>
+
 
 <style>
   nav {

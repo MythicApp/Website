@@ -81,20 +81,7 @@ const socials = [
     button: "To Ko-fi",
   },
 ];
-let repoDescription = "An open-source macOS game launcher with the ability to play Windows® games \
-                      through a custom implementation of Apple's Game Porting Toolkit — supporting multiple platforms.";
 
-try {
-  const response = await fetch("https://api.github.com/repos/MythicApp/Mythic");
-  if (response.ok) {
-    const data = await response.json();
-    repoDescription = data.description || repoDescription;
-  } else {
-    console.error("Failed to fetch repository details:", response.statusText);
-  }
-} catch (error) {
-  console.error("Error fetching GitHub API:", error);
-}
 ---
 
 <Layout title="Mythic">
@@ -108,7 +95,7 @@ try {
   <h1 class="mythic-gradient-text">
     The best way to play Windows games on Mac.
   </h1>
-  <p>{repoDescription}</p>
+  <p>An open-source macOS game launcher with the ability to play Windows® games through a custom implementation of Apple's Game Porting Toolkit — supporting multiple platforms.</p>
   <br />
   <a class="button-md" href="https://github.com/MythicApp/Mythic/releases">
     Download Alpha
