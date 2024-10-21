@@ -9,6 +9,6 @@ export default defineConfig({
     integrations: [icon()],
     redirects: {
         "/sparkle/appcast.xml" : "/appcast.xml",
-        "/discord" : "https://discord.gg/58NZ7fFqPy"
+        "/discord" : "https://discord.gg/kQKdvjTVqh"
     }
 });
