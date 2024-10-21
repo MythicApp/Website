@@ -6,36 +6,55 @@ import Question from "../components/ui/Question.astro";
 
 const questions = [
   {
-    question: "What is Mythic?",
+    question:
+      "What is Mythic?",
     answer:
       "Mythic is an open-source Epic Games Launcher alternative and a normal game launcher for macOS, written in Swift. This project was created to provide a GUI frontend for Legendary and to play Windows games using Apple's game porting toolkit.",
   },
   {
-    question: "How does Mythic run Windows games on macOS?",
+    question:
+      "Why do I get 'Mythic can't be opened because Apple cannot check it for malicious software'?",
+    answer:
+      "This is caused because Mythic isn't notarized yet. Open 'System Settings' then go to 'Privacy and Security' and then scroll down to where it says 'Mythic was blocked from use because it is not from an identified developer' and then press on 'Open Anyway' in the same dialogue box. Now attempt to reopen Mythic and press 'Open' and Mythic will now run. This will have to be done for every update that releases until the notarization process is complete.",
+  },
+  {
+    question:
+      "How do I download Mythic?",
+    answer:
+      "You can download Mythic from <a href='/download'>here</a>.\nOn the GitHub releases page, you can download the latest version of Mythic for your macOS version. simply locate the 'Mythic.zip' file and download it.",
+  },
+  {
+    question:
+      "How does Mythic run Windows games on macOS?",
     answer:
       "Mythic uses the Mythic Engine, which is a derivative of Apple's Game Porting Toolkit (commonly referred to as GPTK), functioning as an API translator for Windows code. Performance is variable but closer to native performance than ever before.",
   },
   {
-    question: "How is this different from launchers like Heroic?",
+    question:
+      "How is this different from launchers like Heroic?",
     answer:
       "Compared to Heroic, Mythic has various features that make it a native experience. Mythic is written completely in Apple&apos;s own proprietary language, Swift. This gives Mythic a native macOS app appearance, as well as helps performance significantly. Heroic also makes use of Electron, which is known to have high resource consumption and is prone to clunky performance. Mythic&apos;s engine is a culmination of Apple&apos;s own Game Porting Toolkit, as well as other well known enhancements such as DXVK and soon, Winetricks.",
   },
   {
-    question: "Will ___ feature or ___ game platform come to Mythic?",
+    question:
+      "Will ___ feature or ___ game platform come to Mythic?",
     answer:
-      'Currently, we\'re working our hardest to complete Mythic, and you can track our progress on the <a href="https://github.com/orgs/MythicApp/projects/2/views/2">roadmap</a>. If anything you want is missing, open up an issue on the <a href="https:/github.com/MythicApp/Mythic">GitHub</a> or <a href="https:/https://discord.gg/58NZ7fFqPy.gg/VsHBMu7htC">join the Discord!</a>.',
+      'Currently, we\'re working our hardest to complete Mythic, and you can track our progress on the <a href="https://github.com/orgs/MythicApp/projects/2/views/2">roadmap</a>. If anything you want is missing, open up an issue on the <a href="https:/github.com/MythicApp/Mythic">GitHub</a> or <a href="https://discord.gg/kQKdvjTVqh">join the Discord.</a>.',
   },
   {
-    question: "What are the system requirements for Mythic?",
+    question:
+      "What are the system requirements for Mythic?",
     answer:
-      "Mythic requires: macOS 14 or later, approximately 550 MB RAM, approximately 2GB of storage (including Mythic&apos;s Engine (1.8GB) and the app (30MB)). Keep in mind that these requirements will change as development progresses.",
+      "Mythic requires macOS 14 or later, and can run on any mac that runs this OS. It requires approximately 2GB of storage (Mythic Engine -- ~1.8GB and the app -- ~30MB). Keep in mind that these requirements will change as development progresses.",
   },
   {
-    question: "Can I import my own games (non-launcher)?",
-    answer: "Yes, you can import your own games to Mythic.",
+    question:
+      "Can I import my own games (non-launcher)?",
+    answer: "Yes, you can import your own games to Mythic, using the 'Import' button in the top menu of the app's Library section.",
   },
   {
-    question: "What games run using Mythic?",
+    question:
+      "What games run using Mythic?",
     answer:
       "Almost any game or app that runs on Windows can run on Mythic (via GPTK), with the exception of games that use the Windows UWP platform and games that use kernel-level anti-cheats. Whether support for this will come is unknown and will come at the discretion of those working on wine. For a (currently limited) list of games that have been tested, visit the docs or the community-contributable spreadsheet.",
   },
@@ -47,18 +66,13 @@ const questions = [
   },
   {
     question:
-      "Why do I get 'Mythic can't be opened because Apple cannot check it for malicious software'?",
-    answer:
-      "This is caused because Mythic isn't 'Notarized' yet. This is paid for already and should be implemented and shouldn't happen in the next couple of updates. For a temporary fix, open 'System Settings' then go to 'Privacy and Security' and then scroll down to where it says 'Mythic was blocked from use because it is not from an identified developer' and then press on 'Open Anyway' in the same dialogue box. Now attempt to reopen Mythic and press 'Open' and Mythic will now run. This will have to be done for every update that releases until the Notarization process is complete.",
-  },
-  {
-    question:
       "When I try to run a game on Mythic I receive a Missing MS Visual C++ Runtime Missing?",
     answer:
       'A community member (Asxrow) created a <a href="https://youtu.be/AEhH0Zj8Lyk">YouTube Video</a> on how to fix this issue. It is a simple process and once installed, this error will not pop up again. When Winetricks is fixed, this video will not be needed.',
   },
   {
-    question: "Why are the apps/games I import so small?",
+    question:
+      "Why are the apps/games I import so small?",
     answer:
       "This is an issue with the compatibility layer between the two operating systems. To fix this, go to Bottle Settings inside of Wine on the sidebar. At the bottom, press 'Open Configurator' and at the top press on 'Graphics' and at the bottom of that menu, scale up to 240 DPI and press 'Apply,' then 'Ok.' If you want to see your changes, reopen that menu and change the scaling to whatever you want, but I don&apos;t recommend above 400 DPI. This only affects imported app windows.",
   },
