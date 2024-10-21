@@ -49,18 +49,39 @@ import { Image } from "astro:assets";
     }
   }
 
+  .feature-text {
+    padding-bottom: 24px;
+    max-width: 100%; /* Ensure text does not exceed container width */
+    overflow-wrap: anywhere
+  }
+
   .feature-text h3 {
     font-size: 1.5rem;
     margin-bottom: 10px;
+    word-wrap: break-word; /* Break long words in headings */
+    overflow-wrap: break-word; /* Ensure long words break */
   }
 
   .feature-text p {
     font-size: 1rem;
-    max-width: 80%;
+    max-width: 100%; /* Ensure text does not exceed container width */
     margin: 0 auto;
+    word-wrap: break-word; /* Break long words in paragraphs */
+    overflow-wrap: break-word; /* Ensure long words break */
   }
 
-  .feature-text {
-    padding-bottom: 24px;
+  .feature-image {
+    width: 100%;
+    height: auto;
+    position: relative;
+    overflow: hidden; /* Prevent image overflow */
+  }
+
+  .feature-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    display: block;
   }
 </style>
