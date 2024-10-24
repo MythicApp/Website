@@ -1,5 +1,5 @@
 ---
-const { title, desc, image, color, footnote = '' } = Astro.props;
+const { title, desc, image, color, footnote = "" } = Astro.props;
 import { Image } from "astro:assets";
 ---
 
@@ -11,18 +11,20 @@ import { Image } from "astro:assets";
   <div class="feature-image">
     <Image src={image} loading="lazy" alt="Mythic feature" />
   </div>
-    <p style="font-size: 0.8rem; font-style: italic;">{footnote}</p>
+  <div class="feature-footnote">
+    <p>{footnote}</p>
+  </div>
 </div>
 
 <style>
   .feature-card {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: left;
     background-color: var(--secondary-nav-color);
     padding: 20px;
     border-radius: 16px;
-    text-align: center;
+    text-align: left;
     margin-bottom: 20px;
     height: 100%;
   }
@@ -52,29 +54,22 @@ import { Image } from "astro:assets";
   .feature-text {
     padding-bottom: 24px;
     max-width: 100%; /* Ensure text does not exceed container width */
-    overflow-wrap: anywhere
+    overflow-wrap: anywhere;
   }
 
   .feature-text h3 {
-    font-size: 1.5rem;
+    font-size: 19px;
     margin-bottom: 10px;
     word-wrap: break-word; /* Break long words in headings */
     overflow-wrap: break-word; /* Ensure long words break */
   }
 
   .feature-text p {
-    font-size: 1rem;
+    font-size: 17px;
     max-width: 100%; /* Ensure text does not exceed container width */
-    margin: 0 auto;
     word-wrap: break-word; /* Break long words in paragraphs */
     overflow-wrap: break-word; /* Ensure long words break */
-  }
-
-  .feature-image {
-    width: 100%;
-    height: auto;
-    position: relative;
-    overflow: hidden; /* Prevent image overflow */
+    color: #1d1d1f;
   }
 
   .feature-image img {
@@ -83,5 +78,18 @@ import { Image } from "astro:assets";
     object-fit: cover;
     transition: transform 0.3s ease;
     display: block;
+  }
+
+  .feature-footnote {
+    display: flex;
+    justify-content: center; /* Center the footnote horizontally */
+    align-items: center; /* Center vertically if needed */
+    padding-top: 10px; /* Optional padding for spacing */
+  }
+
+  .feature-footnote p {
+    font-size: 12px;
+    text-align: center;
+    color: var(--footnote-color);
   }
 </style>
