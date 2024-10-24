@@ -8,7 +8,6 @@ import { features } from "./index.astro";
   <h1 class="mythic-gradient-text">Thanks for downloading Mythic!</h1>
   <p>You're just a few seconds away from greatness... (<span id="countdown-timer">3</span>)</p>
   <p>If your download hasn't started, please <a href="#" onclick="fetchLatestRelease()">click here</a>.</p>
-
   <p>Please note that for newer versions of macOS, you may need to toggle the 'Allow apps from' setting in System Settings &gt; Privacy & Security &gt; Security to 'Anywhere'.</p>
   <p>For any concerns, please consult the <a href="/faq">FAQ</a> or join the <a href="/discord">Discord</a>.</p>
 
@@ -108,6 +107,12 @@ import { features } from "./index.astro";
       background-clip: text;
       animation: move-bg 40s infinite ease-in-out;
       margin-bottom: 0;
+    }
+
+    p {
+      margin: 0;
+      padding: 0;
+      margin-bottom: 10px; 
     }
   </style>
 
