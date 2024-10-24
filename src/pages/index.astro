@@ -110,14 +110,16 @@ const socials = [
   />
 
   <div class="cta-after">
-    <h1
-      class="mythic-gradient-text"
-      style="text-align: left; margin-bottom: 0;"
-    >
+    <h1 style="margin-bottom: 0;">
       Friends gaming without you?
     </h1>
-    <h1 style="text-align: left; margin: 0;">Mythic can fix that.</h1>
-    <p style="text-align: left; margin-top: 0;">
+    <h1
+      style="margin: 0;"
+      class="mythic-gradient-text"
+    >
+      Mythic can fix that.
+    </h1>
+    <p>
       Time to throw all your virtual machines and subscriptions out of the
       window.
     </p>
@@ -350,11 +352,25 @@ const socials = [
     sub {
       font-size: 12px;
     }
+
+    .cta-after {
+      width: 400px;
+    }
   }
 
   @media only screen and (max-width: 480px) {
     sub {
       font-size: 10px;
     }
+  }
+  .cta-after {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 1rem;
+    background: linear-gradient(to bottom, #fcfcfc 0%, #f2f2f5 10%);
   }
 </style>
