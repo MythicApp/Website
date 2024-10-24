@@ -69,9 +69,10 @@ import Navbar from "../components/navigation/Navbar.astro";
     --button-hover-color: #357bd3;
     --a-color: #222222;
     --a-hover-color: #357bd3;
-    --navbar-color: rgba(251, 251, 253, 0.2);
+    --navbar-color: rgba(255, 255, 255, 0.72);
     --stroke: #dbdbdb;
     --secondary-nav-color: #ffffff;
+    --footnote-color: #424245;
 
     --color-one: #5412f6;
     --color-two: #7e1ed8;
@@ -97,10 +98,11 @@ import Navbar from "../components/navigation/Navbar.astro";
     background-color: var(--primary-color);
     margin: 0;
     padding-top: 52px;
+    -webkit-font-smoothing: antialiased;
   }
 
   body {
-    max-width: 920px;
+    max-width: 96vw !important;
     margin: 50px auto 0;
     display: flex;
     text-align: center;
@@ -114,11 +116,6 @@ import Navbar from "../components/navigation/Navbar.astro";
     min-height: auto;
   }
     */
-  .cta-after {
-    display: flex;
-    flex-direction: column;
-    min-width: 90vw !important;
-  }
 
   a {
     font-family: var(--pro-text);
@@ -181,11 +178,11 @@ import Navbar from "../components/navigation/Navbar.astro";
     font-size: 40px;
   }
 
-  p,
-  text {
+  p {
     font-family: var(--pro-text);
     color: var(--secondary-text);
     font-size: 21px;
+    max-width: 100%;
   }
 
   img {
@@ -220,8 +217,8 @@ import Navbar from "../components/navigation/Navbar.astro";
     }
 
     p {
-      font-size: 16px;
-      max-width: 460px !important;
+      font-size: 18px;
+      max-width: 90%;
     }
 
     img {
@@ -250,6 +247,7 @@ import Navbar from "../components/navigation/Navbar.astro";
 
     p {
       font-size: 16px;
+      max-width: 100%;
     }
 
     img {
