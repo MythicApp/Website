@@ -60,7 +60,7 @@ const socials = [
     title: "Contribute to Mythic",
     desc: "Help in shaping Mythic through pull requests and issues.",
     href: "https://github.com/mythicapp",
-    button: "To GitHub",
+    button: "Learn more",
   },
   {
     icon: "discord",
@@ -74,14 +74,14 @@ const socials = [
     title: "Donate to the project",
     desc: "Supercharge Mythic's development and get benefits (soon...)",
     href: "https://ko-fi.com/blackxfiied",
-    button: "To Ko-fi",
+    button: "Learn more",
   },
   {
     icon: "languages",
     title: "Translate Mythic",
     desc: "Help us translate Mythic into your language, and see it live on the app.",
     href: "https://crowdin.getmythic.app/",
-    button: "To Crowdin",
+    button: "Learn more",
   },
 ];
 
@@ -286,9 +286,9 @@ const socials = [
   .social_wrap {
     display: grid;
     text-align: left;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Ensure uniform size */
-    gap: 20px; /* Space between grid items */
-    width: 100%; /* Use full width of the container */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    width: 100%;
     margin: 50px auto 0;
   }
 
@@ -369,5 +369,10 @@ const socials = [
 
   .cta-content-header h2 {
     font-size: 4rem
+  }
+
+  .social_wrap {
+    display: grid;
+    gap: 1rem;
   }
 </style>

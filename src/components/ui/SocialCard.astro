@@ -50,8 +50,8 @@ const { icon, title, desc, button, href, target } = Astro.props;
   <p>{desc}</p>
   {
     href && button && (
-      <a class="button-md" href={href} target={target}>
-        {button}
+      <a class="learn-more" href={href} target={target}>
+        {button} <svg class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" width="8" height="8"><path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0L11.5 8l-6.146 6.354a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/></svg>
       </a>
     )
   }
@@ -60,11 +60,11 @@ const { icon, title, desc, button, href, target } = Astro.props;
 <style>
   .card {
     display: flex;
-    flex-direction: column; /* Stack content vertically */
-    transition: 0.3s; /* Smooth transition for hover effects */
-    flex: 1 1 calc(33.33% - 20px); /* Take up one-third of available space */
-    height: 300px; /* Fixed height for uniformity */
+    flex-direction: column;
+    transition: 0.3s;
+    height: 100%; /* Ensure the card takes full height */
     width: 100%;
+    justify-content: space-between; /* Distribute space between elements */
 }
   .card h2 {
     margin-bottom: 0;
@@ -72,6 +72,14 @@ const { icon, title, desc, button, href, target } = Astro.props;
 
   .card .button-md {
     width: fit-content;
+  }
+
+  a {
+    color: #06C;
+  }
+
+  a:hover {
+    text-decoration: underline;
   }
 
   @media (max-width: 768px) {
