@@ -90,7 +90,10 @@ import Navbar from "../components/navigation/Navbar.astro";
     margin: 0;
     padding-top: 52px;
     -webkit-font-smoothing: antialiased;
-    max-width: 96vw !important;
+  }
+
+  body {
+    max-width: 96vw;
     margin: 50px auto 0;
     display: flex;
     text-align: center;
@@ -179,6 +182,10 @@ import Navbar from "../components/navigation/Navbar.astro";
     border: 1px solid var(--stroke);
   }
 
+  .text-balance {
+    text-wrap: balance;
+  }
+
   @media only screen and (max-width: 903px) {
     button,
     .button {
@@ -234,6 +241,12 @@ import Navbar from "../components/navigation/Navbar.astro";
 
     img {
       width: 480px;
+    }
+  }
+
+  @media (min-width: 1536px) {
+    body {
+      max-width: 70vw;
     }
   }
 </style>
