@@ -23,16 +23,17 @@ import { Image } from "astro:assets";
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    text-align: left;
     background-color: var(--secondary-nav-color);
     padding: 20px;
     border-radius: 16px;
-    text-align: left;
     margin-bottom: 20px;
     height: 100%;
   }
 
   .feature-image {
     width: 100%;
+    scale: 1.08;
     height: auto;
     position: relative;
     overflow: visible;
@@ -48,7 +49,7 @@ import { Image } from "astro:assets";
 
   @media (hover: hover) and (min-width: 768px) {
     .feature-image img:hover {
-      transform: scale(1.1);
+      transform: scale(1.02);
     }
   }
 
@@ -77,12 +78,13 @@ import { Image } from "astro:assets";
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 10px;
+    margin-top: 10px;
+    text-align: center;
+    width: 100%;
   }
 
   .feature-footnote p {
     font-size: 12px;
-    text-align: center;
     color: var(--footnote-color);
   }
 </style>
