@@ -1,11 +1,11 @@
 ---
 import Layout from "../layouts/Layout.astro";
-
 import { Image } from "astro:assets";
 import CTALogo from "../images/mythic_1024_np.png";
 import CTAImage from "../images/mythic-screenshot.png";
-
 import FeatureSection from "../components/sections/FeatureSection.astro";
+import SocialCard from "../components/ui/SocialCard.astro";
+import Footer from "../components/navigation/Footer.astro";
 
 import FullscreenLibraryScreenshotLight from "../images/app/light/fs_library.png";
 import GameSettingsScreenshotLight from "../images/app/light/gamesettings.png";
@@ -14,10 +14,6 @@ import ContainerConfigurationScreenshotLight from "../images/app/light/container
 import AccountManagerScreenshotLight from "../images/app/light/accountmanager.png";
 import SupportViewScreenshotLight from "../images/app/light/supportview.png";
 import MythicXcodeScreenshotLight from "../images/app/light/mythic_xcode.png";
-
-import SocialCard from "../components/ui/SocialCard.astro";
-
-import Footer from "../components/navigation/Footer.astro";
 
 export const features = [
   {
@@ -117,100 +113,65 @@ const socials = [
   />
 
   <div class="cta-after">
-    <h1 style="margin-bottom: 0;">
-      Friends gaming without you?
-    </h1>
-    <h1
-      style="margin: 0;"
-      class="mythic-gradient-text"
-    >
-      Mythic can fix that.
-    </h1>
-    <p>
-      Time to throw all your virtual machines and subscriptions out of the
-      window.
-    </p>
-
-    <!-- unfortunately i'm not a webdev and am too lazy to deal with modularity -->
-    <div class="grid-container" style="grid-template-columns: 3fr 1fr;">
-      <div class="large-tile">
-        <FeatureSection
-          title={features[0].title}
-          desc={features[0].desc}
-          image={features[0].image}
-          id="1"
-          color={features[0].color}
-          footnote="Some Windows® games may not be supported for use within Mythic."
-        />
-      </div>
-      <div class="small-tile">
-        <FeatureSection
-          title={features[1].title}
-          desc={features[1].desc}
-          image={features[1].image}
-          id="2"
-          color={features[1].color}
-        />
-      </div>
-      <div class="small-tile">
-        <FeatureSection
-          title={features[2].title}
-          desc={features[2].desc}
-          image={features[2].image}
-          id="3"
-          color={features[2].color}
-          footnote="Steam support is still in development."
-        />
-      </div>
+    <div class="cta-content">
+      <div class="cta-content-header">
+      <h2 style="margin-bottom: 0;">
+        Friends gaming without you?
+      </h2>
+      <h2 class="mythic-gradient-text">
+        Mythic can fix that.
+      </h2>
+      <p>
+        Time to throw all your virtual machines and subscriptions out of the
+        window.
+      </p>
     </div>
 
-    <div class="grid-container" style="grid-template-columns: 1fr 3fr;">
-      <div class="large-tile" style="grid-column: 2;">
-        <FeatureSection
-          title={features[3].title}
-          desc={features[3].desc}
-          image={features[3].image}
-          id="3"
-          color={features[3].color}
-        />
+      <div class="grid-container" style="grid-template-columns: 3fr 1fr;">
+        {features.slice(0, 3).map((feature, index) => (
+          <div class={index === 0 ? "large-tile" : "small-tile"}>
+            <FeatureSection
+              title={feature.title}
+              desc={feature.desc}
+              image={feature.image}
+              id={index + 1}
+              color={feature.color}
+              footnote={index === 0 ? "Some Windows® games may not be supported for use within Mythic." : index === 2 ? "Steam support is still in development." : ""}
+            />
+          </div>
+        ))}
       </div>
-      <div class="small-tile" style="grid-column: 1;">
-        <FeatureSection
-          title={features[4].title}
-          desc={features[4].desc}
-          image={features[4].image}
-          id="4"
-          color={features[4].color}
-        />
+
+      <div class="grid-container" style="grid-template-columns: 1fr 3fr;">
+        {features.slice(3).map((feature, index) => (
+          <div class={index === 0 ? "large-tile" : "small-tile"} style={index === 0 ? "grid-column: 2;" : "grid-column: 1;"}>
+            <FeatureSection
+              title={feature.title}
+              desc={feature.desc}
+              image={feature.image}
+              id={index + 4}
+              color={feature.color}
+            />
+          </div>
+        ))}
       </div>
-      <div class="small-tile" style="grid-column: 1;">
-        <FeatureSection
-          title={features[5].title}
-          desc={features[5].desc}
-          image={features[5].image}
-          id="5"
-          color={features[5].color}
-        />
-      </div>
-    </div>
 
-    <sub>
-      We have even more to come, check out the{" "}
-      <span>
-        <a href="https://github.com/orgs/MythicApp/projects/2/views/2">
-          roadmap.
-        </a>
-      </span>
-    </sub>
+      <sub>
+        We have even more to come, check out the{" "}
+        <span>
+          <a href="https://github.com/orgs/MythicApp/projects/2/views/2">
+            roadmap.
+          </a>
+        </span>
+      </sub>
 
-    <sub>
-      (Please note that Mythic is still in its alpha stage of development;
-      expect bugs.)
-    </sub>
+      <sub>
+        (Please note that Mythic is still in its alpha stage of development;
+        expect bugs.)
+      </sub>
 
-    <div class="social_wrap">
-      {
-        socials.map((social, index) => (
+      <div class="social_wrap">
+        {socials.map((social, index) => (
           <SocialCard
             key={index}
             icon={social.icon}
@@ -220,8 +181,8 @@ const socials = [
             button={social.button}
             target="_blank"
           />
-        ))
-      }
+        ))}
+      </div>
     </div>
   </div>
 
@@ -229,6 +190,10 @@ const socials = [
 </Layout>
 
 <style>
+  body {
+    width: 80vw;
+  }
+
   .grid-container {
     display: grid;
     gap: 1rem;
@@ -383,14 +348,26 @@ const socials = [
       font-size: 10px;
     }
   }
+
   .cta-after {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 100vw;
+    background: linear-gradient(to bottom, #fcfcfc 0%, #f2f2f5 10%);
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 0 1rem;
-    background: linear-gradient(to bottom, #fcfcfc 0%, #f2f2f5 10%);
+  }
+
+  .cta-content {
+    width: 95vw;
+  }
+
+  .cta-content-header {
+    margin: 5%;
+  }
+
+  .cta-content-header h2 {
+    font-size: 4rem
   }
 </style>
