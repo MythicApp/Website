@@ -11,16 +11,18 @@ import { Image } from "astro:assets";
   <div class="feature-image">
     <Image src={image} loading="lazy" alt="Mythic feature" />
   </div>
-  <div class="feature-footnote">
-    <p>{footnote}</p>
-  </div>
+  {footnote && (
+    <div class="feature-footnote">
+      <p>{footnote}</p>
+    </div>
+  )}
 </div>
 
 <style>
   .feature-card {
     display: flex;
     flex-direction: column;
-    align-items: left;
+    align-items: flex-start;
     background-color: var(--secondary-nav-color);
     padding: 20px;
     border-radius: 16px;
@@ -33,7 +35,7 @@ import { Image } from "astro:assets";
     width: 100%;
     height: auto;
     position: relative;
-    overflow: visible; /* Allow the image to expand beyond its container */
+    overflow: visible;
   }
 
   .feature-image img {
@@ -44,47 +46,38 @@ import { Image } from "astro:assets";
     display: block;
   }
 
-  /* Image hover effect for larger screens */
   @media (hover: hover) and (min-width: 768px) {
     .feature-image img:hover {
-      transform: scale(1.1); /* Scale the image without clipping */
+      transform: scale(1.1);
     }
   }
 
   .feature-text {
     padding-bottom: 24px;
-    max-width: 100%; /* Ensure text does not exceed container width */
+    max-width: 100%;
     overflow-wrap: anywhere;
   }
 
   .feature-text h3 {
     font-size: 19px;
     margin-bottom: 10px;
-    word-wrap: break-word; /* Break long words in headings */
-    overflow-wrap: break-word; /* Ensure long words break */
+    word-wrap: break-word;
+    overflow-wrap: break-word;
   }
 
   .feature-text p {
     font-size: 17px;
-    max-width: 100%; /* Ensure text does not exceed container width */
-    word-wrap: break-word; /* Break long words in paragraphs */
-    overflow-wrap: break-word; /* Ensure long words break */
+    max-width: 100%;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
     color: #1d1d1f;
-  }
-
-  .feature-image img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    transition: transform 0.3s ease;
-    display: block;
   }
 
   .feature-footnote {
     display: flex;
-    justify-content: center; /* Center the footnote horizontally */
-    align-items: center; /* Center vertically if needed */
-    padding-top: 10px; /* Optional padding for spacing */
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
   }
 
   .feature-footnote p {
