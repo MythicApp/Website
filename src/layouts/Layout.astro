@@ -102,7 +102,7 @@ import Navbar from "../components/navigation/Navbar.astro";
   }
 
   body {
-    max-width: 96vw !important;
+    max-width: 96vw;
     margin: 50px auto 0;
     display: flex;
     text-align: center;
@@ -256,6 +256,12 @@ import Navbar from "../components/navigation/Navbar.astro";
 
     img {
       width: 480px;
+    }
+  }
+
+  @media (min-width: 1536px) {
+    body {
+      max-width: 70vw;
     }
   }
 </style>
