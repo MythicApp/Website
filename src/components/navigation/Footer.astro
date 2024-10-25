@@ -1,34 +1,12 @@
 ---
-// const getThemeFromLocalStorage = () => {
-//   return typeof window !== "undefined"
-//     ? localStorage.getItem("theme") || "light"
-//     : "light";
-// };
-
-// let theme = getThemeFromLocalStorage();
+const currentYear = new Date().getFullYear();
 ---
 
 <footer class="footer">
   <div class="copyright">
-    &copy; {new Date().getFullYear()} Mythic. All rights reserved.
+    &copy; {currentYear} Mythic. All rights reserved.
   </div>
-  <!-- <div class="theme-switcher">
-    <button
-      class={`theme-option ${theme === "light" ? "active" : ""}`.trim()}
-      id="lightTheme"
-    >
-      Light
-    </button>
-    <button
-      class={`theme-option ${theme === "dark" ? "active" : ""}`.trim()}
-      id="darkTheme"
-    >
-      Dark
-    </button>
-  </div> -->
 </footer>
-
-<!-- <script src="/theme.js" defer></script> -->
 
 <style>
   .footer {
@@ -43,32 +21,6 @@
     color: var(--secondary-text);
     border-top: 1px solid var(--stroke);
     justify-content: center;
-  }
-
-  .theme-switcher {
-    display: flex;
-    align-items: center;
-    border: 1px solid var(--stroke);
-    border-radius: 24px;
-    transition: 0.3s;
-  }
-
-  .theme-option {
-    border: none;
-    background-color: transparent;
-    color: var(--secondary-text);
-    cursor: pointer;
-    padding: 5px;
-    font-size: 14px;
-    font-family: var(--pro-text);
-    transition: 0.3s;
-  }
-
-  .theme-option.active {
-    color: #fff !important;
-    font-weight: bold;
-    background-color: var(--button-color);
-    border-radius: 100px;
   }
 
   .copyright {
