@@ -1,18 +1,15 @@
 ---
 const currentYear = new Date().getFullYear();
+import { Image } from "astro:assets";
+import WhiskyWineLogo from "../../images/svg/light/Powered By WhiskyWine.light.svg";
 ---
 
 <footer class="footer">
   <div class="footer-logos">
-  <a href="https://getwhisky.app" target="_blank">
-    <img
-      src="src/images/svg/light/Powered By WhiskyWine.light.svg"
-      alt="Powered By WhiskyWine"
-      loading="eager"
-      class="platform-card"
-    />
-  </a>
-</div>
+    <a href="https://getwhisky.app" target="_blank">
+      <Image src={WhiskyWineLogo} alt="Powered By WhiskyWine" loading="eager" class="platform-card" />
+    </a>
+  </div>
 
   <p class="copyright">
     &copy; {currentYear} Mythic. All rights reserved.
