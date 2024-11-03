@@ -6,10 +6,27 @@ import { features } from "./index.astro";
 
 <Layout title="Thanks for downloading!">
   <h1 class="mythic-gradient-text">Thanks for downloading Mythic!</h1>
-  <p>You're just a few seconds away from greatness... (<span id="countdown-timer">3</span>)</p>
-  <p>If your download hasn't started, please <a href="#" onclick="fetchLatestRelease()">click here</a>.</p>
-  <p>Please note that for newer versions of macOS, you may need to toggle the 'Allow apps from' setting in System Settings &gt; Privacy & Security &gt; Security to 'Anywhere'.</p>
-  <p>For any concerns, please consult the <a href="/faq">FAQ</a> or join the <a href="/discord">Discord</a>.</p>
+  <p>
+    You're just a few seconds away from greatness... (<span id="countdown-timer"
+      >3</span
+    >)
+  </p>
+  <p>
+    If your download hasn't started, please <a
+      href="#"
+      onclick="fetchLatestRelease()">click here</a
+    >.
+  </p>
+  <p>
+    Please note that for newer versions of macOS, you may need to toggle the
+    'Allow apps from' setting in System Settings &gt; Privacy & Security &gt;
+    Security to 'Anywhere'.
+  </p>
+  <p>
+    For any concerns, please consult the <a href="/faq">FAQ</a> or join the <a
+      href="/discord">Discord</a
+    >.
+  </p>
 
   <div class="marquee-container">
     <div class="marquee-content">
@@ -112,38 +129,101 @@ import { features } from "./index.astro";
     p {
       margin: 0;
       padding: 0;
-      margin-bottom: 10px; 
+      margin-bottom: 10px;
     }
   </style>
 
   <script>
+    const APPCAST_URL = "https://getmythic.app/appcast.xml";
+
     async function fetchLatestRelease() {
-      try {
-        const response = await fetch('https://api.github.com/repos/MythicApp/Mythic/releases');
-        const releases = await response.json();
-        const latestRelease = releases[0];
-        const asset = latestRelease.assets.find((asset: { name: string; browser_download_url: string }) => asset.name === 'Mythic.zip');
-        if (asset) {
-          window.location.href = asset.browser_download_url;
-        } else {
-          console.error('Mythic.zip not found in the latest release assets.');
-        }
-      } catch (error) {
-        console.error('Error fetching the latest release:', error);
+      const response = await fetch(APPCAST_URL).catch((error) => {
+        console.error("Error fetching latest release:", error);
+        return null;
+      });
+      if (!response) return null;
+
+      // Get the text of the response
+      const text = await response.text().catch((error) => {
+        console.error("Error reading response text:", error);
+        return null;
+      });
+      if (!text) return null;
+
+      // Parse the XML
+      const parser = new DOMParser();
+      const xml = parser.parseFromString(text, "text/xml");
+
+      // Check for errors
+      const error = xml.querySelector("parsererror");
+      if (error) {
+        console.error("Error parsing XML:", error);
+        return null;
       }
+
+      // Get the latest release
+      const item = Array.from(xml.getElementsByTagName("item"))
+        .map((item) => ({
+          title: item.getElementsByTagName("title")[0]?.textContent ?? null,
+          versionNumber:
+            item.getElementsByTagName("sparkle:version")[0]?.textContent ??
+            null,
+          enclosure:
+            item.getElementsByTagName("enclosure")[0]?.getAttribute("url") ??
+            null,
+        }))
+        .filter(
+          (item) =>
+            item.title !== null &&
+            item.versionNumber !== null &&
+            item.enclosure !== null,
+        );
+
+      const itemNotNull = (
+        item as { title: string; versionNumber: string; enclosure: string }[]
+      )
+        .map((item) => ({
+          ...item,
+          versionNumber: parseInt(item.versionNumber, 10),
+        }))
+        .filter((item) => !isNaN(item.versionNumber))
+        .sort((a, b) => b.versionNumber - a.versionNumber);
+
+      if (itemNotNull.length === 0) {
+        console.error("No valid releases found");
+        return null;
+      }
+
+      const latestRelease = itemNotNull[0];
+
+      return latestRelease;
     }
 
-    let countdown = 3;
-    const countdownTimer = document.getElementById('countdown-timer');
-    const interval = setInterval(() => {
-      countdown -= 1;
-      if (countdownTimer) {
+    async function main() {
+      const countdownTimer = document.getElementById("countdown-timer");
+      if (!countdownTimer) return;
+
+      let countdown = 3;
+
+      const interval = setInterval(async () => {
+        if (countdown === 0) {
+          clearInterval(interval);
+
+          const latestRelease = await fetchLatestRelease();
+          if (!latestRelease) {
+            alert("Error fetching latest release");
+            return;
+          }
+
+          // Open that page to start the download :D
+          window.location.href = latestRelease.enclosure;
+        }
+
         countdownTimer.textContent = countdown.toString();
-      }
-      if (countdown === 0) {
-        clearInterval(interval);
-        fetchLatestRelease();
-      }
-    }, 1000);
+        countdown -= 1;
+      }, 1000);
+    }
+
+    main();
   </script>
 </Layout>
