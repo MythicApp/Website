@@ -3,6 +3,21 @@
     <channel>
         <title>Mythic</title>
         <item>
+            <title>0.4.2</title>
+            <pubDate>Sat, 09 Nov 2024 17:01:19 +0800</pubDate>
+            <sparkle:version>3056</sparkle:version>
+            <sparkle:shortVersionString>0.4.2</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <enclosure url="https://dl.getmythic.app/sparkle-temp/Mythic-0.4.2.zip" length="19180218" type="application/octet-stream" sparkle:edSignature="ihDgLNjLgBiGPe0Zau0MKLnGsCGClrIzKvFoW6rACHvV7OY9zs2hifbgG6KoJolm9cxuthWSTJY0SxQKJqIAAA=="/>
+            <sparkle:deltas>
+                <enclosure url="https://dl.getmythic.app/sparkle-temp/Mythic3056-3037.delta" sparkle:deltaFrom="3037" length="1512482" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="864784" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,en" sparkle:edSignature="TODnrs/wcDTtvj0S1HClpYILP277+9eO/z2MjZl/MEUow/SLoBzQtWYSB4GzEz6TXYIcZ7u5b4u0F/ewjtTaDw=="/>
+                <enclosure url="https://dl.getmythic.app/sparkle-temp/Mythic3056-2940.delta" sparkle:deltaFrom="2940" length="2329710" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="864768" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,en" sparkle:edSignature="hLsuhw3Qwo6mRsVGA9JCG4VnH3RxwEH6vhy8r7tW9aoWZj/BQ82dNJbTziBe8EzZfznMiqMDORyFvS9+dmgEDw=="/>
+                <enclosure url="https://dl.getmythic.app/sparkle-temp/Mythic3056-2840.delta" sparkle:deltaFrom="2840" length="2952402" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="864768" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,en" sparkle:edSignature="/nzj8ekPlGGtWMJbI+VhdUX9dVjZltVgjVkC9dfAvM/rYEmB1La5XrXtso0wGkMZxhbt14n0PSp6dIaYdr3pDw=="/>
+                <enclosure url="https://dl.getmythic.app/sparkle-temp/Mythic3056-2828.delta" sparkle:deltaFrom="2828" length="2964390" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="864768" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,en" sparkle:edSignature="d5nB/LYqtgUe8S1n7Wl6kzpdC442ndTdU8s1vdwI+2gHSOd4/qYPBhWlmrniKJ5a6qoCyVWbV2MwbCIwhrs+Dw=="/>
+                <enclosure url="https://dl.getmythic.app/sparkle-temp/Mythic3056-2789.delta" sparkle:deltaFrom="2789" length="2963742" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="864768" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,en" sparkle:edSignature="NmZhAQuXVLH2dG1ImsH1BMaxZKq3MIvPnb0WjhUhWVsE6gNdBzSl6YVh46gRJEk0Jn0CKMZgI0HsCgd+XFD4AA=="/>
+            </sparkle:deltas>
+        </item>
+        <item>
             <title>0.4.1</title>
             <pubDate>Sun, 03 Nov 2024 15:09:54 +0800</pubDate>
             <sparkle:version>3037</sparkle:version>
@@ -30,20 +45,6 @@
                 <enclosure url="https://dl.getmythic.app/sparkle-temp/Mythic2940-2789.delta" sparkle:deltaFrom="2789" length="1172014" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="864768" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,en" sparkle:edSignature="EwT0gGx8mFbWFbdPjMPLnF21Gyia6WB5BElB1F4F2C0NTVbG+kqaneWj6/2pT7j7Wf6qHD+E2DpNVoxV2kXvCQ=="/>
                 <enclosure url="https://dl.getmythic.app/sparkle-temp/Mythic2940-2780.delta" sparkle:deltaFrom="2780" length="1280334" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="864768" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,en" sparkle:edSignature="gSg+XGMEYU3WTupCCJklAMGEXIQhYI2u1rMsjRUd8xBzKgoPWMUUYEo4LfqUE0Aw3Omtndml6mf4YhPOCl8rCQ=="/>
                 <enclosure url="https://dl.getmythic.app/sparkle-temp/Mythic2940-2754.delta" sparkle:deltaFrom="2754" length="972846" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="864768" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,en" sparkle:edSignature="BJqwxpNZHrP1p8BQFxLdWc9Md9SEuQuFZ3pvpGQ9AK7j0RUfskPxBdesevzQfs3lZzmXEz83C/rLnTemDblwAw=="/>
-            </sparkle:deltas>
-        </item>
-        <item>
-            <title>0.3.2</title>
-            <pubDate>Sun, 28 Jul 2024 11:44:02 +0800</pubDate>
-            <sparkle:version>2840</sparkle:version>
-            <sparkle:shortVersionString>0.3.2</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <enclosure url="https://dl.getmythic.app/sparkle-temp/Mythic-0.3.2.zip" length="17252727" type="application/octet-stream" sparkle:edSignature="9FUDFS802FdLYDz6eyKth4rKwUXdqFz04HY9m+vGFgKR7at6cjc8rJqRmKew/8akO/tk/m7KtJllI22qLPU4Cg=="/>
-            <sparkle:deltas>
-                <enclosure url="https://dl.getmythic.app/sparkle-temp/Mythic2840-2828.delta" sparkle:deltaFrom="2828" length="376810" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="864768" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,en" sparkle:edSignature="2McRXnITovSn9PbRi2rxiRn2R+YZlXakw+XJCeBxsntd87OvxLxOWru62IV08kKNzKJmsKSzW2vpwwM7nubPDw=="/>
-                <enclosure url="https://dl.getmythic.app/sparkle-temp/Mythic2840-2789.delta" sparkle:deltaFrom="2789" length="420902" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="864768" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,en" sparkle:edSignature="6DKQe9XS4UHLTC/d2luvTCVmjUCwMO3ChVQa303mS2Oe5JkcrFrFCsMcFutQu0umFcy9YnGwp8n519Om3G0+DA=="/>
-                <enclosure url="https://dl.getmythic.app/sparkle-temp/Mythic2840-2780.delta" sparkle:deltaFrom="2780" length="629342" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="864768" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,en" sparkle:edSignature="VZvdNZ6fkcxlANsI+AJ0g++wn3W6YYCCTw6o8Z9M2v7gzLq2Ed6Agenzkx/N/LBEoWG+5Y+TvVYY8bO1BhZnBQ=="/>
-                <enclosure url="https://dl.getmythic.app/sparkle-temp/Mythic2840-2754.delta" sparkle:deltaFrom="2754" length="1153034" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="864768" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,en" sparkle:edSignature="gMQ7ydx0Six/5gmYZfhEN1az6GRl3626SKhbIJ+b3W4E79scUayiKfzx83VygyqfuKpvj0Nloov6jYNBp63hCw=="/>
             </sparkle:deltas>
         </item>
     </channel>
