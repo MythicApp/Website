@@ -137,7 +137,9 @@ import { features } from "./index.astro";
     const APPCAST_URL = "https://dl.getmythic.app/updates/update.xml";
 
     async function fetchLatestRelease() {
-      const response = await fetch(APPCAST_URL).catch((error) => {
+      const response = await fetch(APPCAST_URL, {
+        credentials: "omit",
+      }).catch((error) => {
         console.error("Error fetching latest release:", error);
         return null;
       });
