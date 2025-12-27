@@ -1,19 +1,19 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import { Image } from "astro:assets";
-import CTALogo from "../images/mythic_1024_np.png";
+import CTALogo from "../images/Mythic-macOS-Default-1024x1024@1x.png";
 import CTAImage from "../images/mythic-screenshot.png";
 import FeatureSection from "../components/sections/FeatureSection.astro";
 import SocialCard from "../components/ui/SocialCard.astro";
 import Footer from "../components/navigation/Footer.astro";
 
-import FullscreenLibraryScreenshotLight from "../images/app/light/fs_library.png";
-import GameSettingsScreenshotLight from "../images/app/light/gamesettings.png";
-import ImportSheetScreenshotLight from "../images/app/light/importsheet.png";
-import ContainerConfigurationScreenshotLight from "../images/app/light/containerconfiguration.png";
-import AccountManagerScreenshotLight from "../images/app/light/accountmanager.png";
+import FullscreenLibraryScreenshotLight from "../images/app/light/library.png";
+import GameSettingsScreenshotLight from "../images/app/light/operations.png";
+import ImportSheetScreenshotLight from "../images/app/light/import.png";
+import ContainerConfigurationScreenshotLight from "../images/app/light/containercreation.png";
+import AccountManagerScreenshotLight from "../images/app/light/accounts_onboarding.png";
 import SupportViewScreenshotLight from "../images/app/light/supportview.png";
-import MythicXcodeScreenshotLight from "../images/app/light/mythic_xcode.png";
+import MythicXcodeScreenshotLight from "../images/app/light/xcode.png";
 
 export const features = [
   {
@@ -36,7 +36,7 @@ export const features = [
   },
   {
     title: "Game management, without the fuss.",
-    desc: "Need to move your games around? Maybe, edit some settings? Add some flags? Mythic has you covered.",
+    desc: "Mythic makes it easy to install and remove games, integrating this functionality into one seamless package.",
     image: GameSettingsScreenshotLight,
     color: "#2294b1",
   },
@@ -136,7 +136,7 @@ const socials = [
               image={feature.image}
               id={index + 1}
               color={feature.color}
-              footnote={index === 0 ? "Some Windows® games may not be supported for use within Mythic." : index === 2 ? "Steam support is still in development." : ""}
+              footnote={index === 0 ? "Some Windows® games may not be supported for use within Mythic." : index === 2 ? "Support for other game storefronts is in development." : ""}
             />
           </div>
         ))}
