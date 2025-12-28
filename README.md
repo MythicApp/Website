@@ -1,3 +1,6 @@
+# ⚠️ This repository is deprecated.
+# Superseded by the repository [MythicApp/getmythic.app](https://github.com/MythicApp/getmythic.app).
+
 <h1 align="center">
   <br>
   <a href="https://getmythic.app">
